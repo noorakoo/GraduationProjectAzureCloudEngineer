@@ -2,7 +2,7 @@ import os
 
 SubscriptionId = "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c"
 Location = "northeurope"
-MyResourceGroup = "testRG"
+MyResourceGroup = "testRG2"
 TemplateName = "blanktemplate"
 TemplateFileName = "azuredeploy.json"
 ParameterFile = "@vm_parameters.json"

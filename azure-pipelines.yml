@@ -24,3 +24,4 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
+- script: python src/CreateResources.py
