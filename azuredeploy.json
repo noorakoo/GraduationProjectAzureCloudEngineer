@@ -3,92 +3,70 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "networkInterfaceName": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "enableAcceleratedNetworking": {
-            "type": "bool",
-            "value": null
+            "type": "bool"
         },
         "networkSecurityGroupName": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "networkSecurityGroupRules": {
-            "type": "array",
-            "value": null
+            "type": "array"
         },
         "subnetName": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "virtualNetworkId": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "publicIpAddressName": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "publicIpAddressType": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "publicIpAddressSku": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "pipDeleteOption": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "virtualMachineName": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "virtualMachineComputerName": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "virtualMachineRG": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "osDiskType": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "osDiskDeleteOption": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "virtualMachineSize": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "nicDeleteOption": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "adminUsername": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "adminPassword": {
-            "type": "secureString",
-            "value": null
+            "type": "secureString"
         },
         "patchMode": {
-            "type": "string",
-            "value": null
+            "type": "string"
         },
         "enableHotpatching": {
-            "type": "bool",
-            "value": null
+            "type": "bool"
         }
     },
     "variables": {
