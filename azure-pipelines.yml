@@ -21,7 +21,7 @@ steps:
 
 # Python script
 # Run a Python file
-- script: python src/CreateResources.py
+- script: python CreateResources.py
 
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
