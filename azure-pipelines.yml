@@ -21,10 +21,7 @@ steps:
 
 # Python script
 # Run a Python file
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: CreateResources.py
+- script: python src/CreateResources.py
 
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
