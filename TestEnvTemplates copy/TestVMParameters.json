@@ -6,7 +6,7 @@
             "value": "northeurope"
         },
         "networkInterfaceName": {
-            "value": "fortmu-test614"
+            "value": "Fortmu-test614"
         },
         "enableAcceleratedNetworking": {
             "value": true

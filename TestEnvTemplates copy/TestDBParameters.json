@@ -1,0 +1,52 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverName": {
+            "value": "Fortmu-psql"
+        },
+        "location": {
+            "value": "northeurope"
+        },
+        "serverEdition": {
+            "value": "GeneralPurpose"
+        },
+        "storageSizeGB": {
+            "value": 128
+        },
+        "haEnabled": {
+            "value": "Disabled"
+        },
+        "firewallRules": {
+            "value": {
+                "rules": []
+            }
+        },
+        "backupRetentionDays": {
+            "value": 7
+        },
+        "geoRedundantBackup": {
+            "value": "Disabled"
+        },
+        "availabilityZone": {
+            "value": ""
+        },
+        "vmName": {
+            "value": "Standard_D2ds_v4"
+        },
+        "tags": {
+            "value": {
+                "Owner": "Fortmu"
+            }
+        },
+        "administratorLogin": {
+            "value": "postgres"
+        },
+        "administratorLoginPassword": {
+            "value": "Password1234"
+        },
+        "version": {
+            "value": "13"
+        }
+    }
+}
