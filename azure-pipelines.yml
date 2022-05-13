@@ -11,31 +11,29 @@ pool:
 
 # Run a Python file
 jobs:
-- job: DeployVM
-- deployment: DeployVirtualMachine
-  displayName: deploy Virtual Machine 
-  pool:
-    vmImage: 'ubuntu-latest'
-  environment: 'vm-dev'
-  strategy:
-    runOnce:
-      deploy:
-        steps:
-        - checkout: self
-        - task: PythonScript@0
-          inputs:
-            scriptSource: 'filePath'
-            scriptPath: CreateResources.py
+  - job: DeployVM
+  - deployment: DeployVirtualMachine
+    displayName: deploy Virtual Machine 
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: 'vm-dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: self
+          - task: PythonScript@0
+            inputs:
+              scriptSource: 'filePath'
+              scriptPath: CreateResources.py
 
-- job: ResizeVM
-- deployment: ResizeVirtualMachine
-  displayName: resize Virtual Machine
-  condition: eq(variables['Build.Reason'], 'Manual')
-  steps:
-    - task: PythonScript@0
-      inputs:
-        scriptSource: 'filePath'
-        scriptPath: ResizeVM.py
+  - job: ResizeVM
+    condition: eq(variables['Build.Reason'], 'Manual')
+    steps:
+      - task: PythonScript@0
+        inputs:
+          scriptSource: 'filePath'
+          scriptPath: ResizeVM.py
 
 
 
