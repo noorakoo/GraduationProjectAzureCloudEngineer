@@ -4,15 +4,61 @@
 # https://aka.ms/yaml
 
 trigger:
-- none
+- master
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
 # Run a Python file
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: CreateResources.py
+jobs:
+- job: DeployVM
+- deployment: DeployVirtualMachine
+  displayName: deploy Virtual Machine 
+  pool:
+    vmImage: 'ubuntu-latest'
+  environment: 'vm-dev'
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - checkout: self
+        - task: PythonScript@0
+          inputs:
+            scriptSource: 'filePath'
+            scriptPath: CreateResources.py
+
+- job: ResizeVM
+- deployment: ResizeVirtualMachine
+  displayName: resize Virtual Machine
+  condition: eq(variables['Build.Reason'], 'Manual')
+  steps:
+    - task: PythonScript@0
+      inputs:
+        scriptSource: 'filePath'
+        scriptPath: ResizeVM.py
+
+
+
+
+
+
+
+
+
+# jobs:
+#   - job: A
+#     steps:
+#       - task: PythonScript@0
+#         inputs:
+#           scriptSource: 'filePath'
+#           scriptPath: CreateResources.py
+#   - job: B 
+#     dependsOn: A 
+#     steps:
+#       - task: PythonScript@0
+#         inputs:
+#           scriptSource: 'filePath'
+#           scriptPath: ResizeVM.py
+
+
 
