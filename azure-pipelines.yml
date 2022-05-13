@@ -14,9 +14,6 @@ jobs:
   - job: DeployVM
   - deployment: DeployVirtualMachine
     displayName: deploy Virtual Machine 
-    pool:
-      vmImage: 'ubuntu-latest'
-    environment: 'vm-dev'
     strategy:
       runOnce:
         deploy:
