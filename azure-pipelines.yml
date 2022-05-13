@@ -16,7 +16,7 @@ jobs:
     displayName: deploy Virtual Machine 
     pool:
       vmImage: 'ubuntu-latest'
-    environment: 'test'
+    environment: 'Test'
     strategy:
       runOnce:
         deploy:
