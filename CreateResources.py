@@ -1,7 +1,7 @@
 import os
 
 # Signing in and setting the subscription
-SubscriptionId = '07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c'
+SubscriptionId = 'e4305bfa-9413-4c0e-8527-8f5307a80a27'
 Location = 'northeurope'
 os.system('az login')
 os.system(f'az account set --subscription {SubscriptionId}')
