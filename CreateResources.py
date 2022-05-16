@@ -8,6 +8,7 @@ os.system(f'az account set --subscription {SubscriptionId}')
 
 # Creating the test environment
 ResourceGroup = 'TestingRG'
+Location = 'northeurope'
 TemplateName = 'TestTemplate'
 os.system(f'az group create --name {ResourceGroup} --location {Location}')
  
