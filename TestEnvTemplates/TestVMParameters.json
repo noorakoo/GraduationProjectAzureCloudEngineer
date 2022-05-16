@@ -5,14 +5,14 @@
         "location": {
             "value": "northeurope"
         },
-        "networkInterfaceName1": {
-            "value": "test-vm770_z1"
+        "networkInterfaceName": {
+            "value": "fortmu-test-vm815"
         },
         "enableAcceleratedNetworking": {
             "value": true
         },
         "networkSecurityGroupName": {
-            "value": "test-vm-nsg"
+            "value": "Fortmu-test-vm-nsg"
         },
         "networkSecurityGroupRules": {
             "value": [
@@ -32,49 +32,31 @@
             ]
         },
         "subnetName": {
-            "value": "default"
+            "value": "FortmuTestSubnet"
         },
-        "virtualNetworkName": {
-            "value": "TestingRG-vnet"
+        "virtualNetworkId": {
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/Fortmu-G3-Test/providers/Microsoft.Network/virtualNetworks/Fortmu-test-vnet"
         },
-        "addressPrefixes": {
-            "value": [
-                "10.0.0.0/16"
-            ]
-        },
-        "subnets": {
-            "value": [
-                {
-                    "name": "default",
-                    "properties": {
-                        "addressPrefix": "10.0.0.0/24"
-                    }
-                }
-            ]
-        },
-        "publicIpAddressName1": {
-            "value": "test-vm-ip"
+        "publicIpAddressName": {
+            "value": "Fortmu-test-vm-ip"
         },
         "publicIpAddressType": {
-            "value": "Static"
+            "value": "Dynamic"
         },
         "publicIpAddressSku": {
-            "value": "Standard"
+            "value": "Basic"
         },
         "pipDeleteOption": {
-            "value": "Detach"
+            "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "test-vm"
+            "value": "Fortmu-test-vm"
         },
-        "virtualMachineName1": {
-            "value": "test-vm"
-        },
-        "virtualMachineComputerName1": {
-            "value": "test-vm"
+        "virtualMachineComputerName": {
+            "value": "Fortmu-test-vm"
         },
         "virtualMachineRG": {
-            "value": "TestingRG"
+            "value": "Fortmu-G3-Test"
         },
         "osDiskType": {
             "value": "StandardSSD_LRS"
@@ -83,10 +65,10 @@
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_D2as_v4"
+            "value": "Standard_DS1_v2"
         },
         "nicDeleteOption": {
-            "value": "Detach"
+            "value": "Delete"
         },
         "adminUsername": {
             "value": "fortmu"
@@ -99,9 +81,6 @@
         },
         "enableHotpatching": {
             "value": false
-        },
-        "zone": {
-            "value": "1"
         }
     }
 }

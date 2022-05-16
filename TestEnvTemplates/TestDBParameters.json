@@ -3,68 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "serverName": {
-            "value": "fortmu-db-test"
+            "value": "fortmu-test-psql"
         },
         "location": {
             "value": "northeurope"
         },
-        "serverEdition": {
-            "value": "Burstable"
+        "skuName": {
+            "value": "GP_Gen5_4"
         },
-        "storageSizeGB": {
-            "value": 32
+        "skuTier": {
+            "value": "GeneralPurpose"
         },
-        "haEnabled": {
-            "value": "Disabled"
+        "skuCapacity": {
+            "value": 4
         },
-        "firewallRules": {
-            "value": {
-                "rules": []
-            }
+        "skuFamily": {
+            "value": "Gen5"
         },
-        "vnetData": {
-            "value": {
-                "isLoading": false,
-                "virtualNetworkName": "TestingRGvnet659",
-                "virtualNetworkId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/virtualNetworks/TestingRGvnet659",
-                "subnetName": "default",
-                "virtualNetworkSubscriptionName": "Azure subscription 1",
-                "virtualNetworkAddressPrefix": "10.1.0.0/24",
-                "virtualNetworkResourceGroupName": "TestingRG",
-                "location": "northeurope",
-                "subscriptionId": "e4305bfa-9413-4c0e-8527-8f5307a80a27",
-                "subnetProperties": {
-                    "addressPrefix": "10.1.0.0/24",
-                    "delegations": [
-                        {
-                            "name": "dlg-Microsoft.DBforPostgreSQL-flexibleServers",
-                            "properties": {
-                                "serviceName": "Microsoft.DBforPostgreSQL/flexibleServers"
-                            }
-                        }
-                    ]
-                },
-                "subnetNeedsUpdate": false,
-                "isNewVnet": true,
-                "delegatedSubnetArguments": {
-                    "SubnetArmResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/virtualNetworks/TestingRGvnet659/subnets/default"
-                },
-                "usePrivateDnsZone": true,
-                "isNewPrivateDnsZone": true,
-                "privateDnsResourceGroup": "TestingRG",
-                "privateDnsSubscriptionId": "e4305bfa-9413-4c0e-8527-8f5307a80a27",
-                "privateDnsZoneName": "fortmu-db-test.private.postgres.database.azure.com",
-                "privateDnsZoneSubscription": "Azure subscription 1",
-                "privateDnsZoneArguments": {
-                    "PrivateDnsZoneArmResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/privateDnsZones/fortmu-db-test.private.postgres.database.azure.com"
-                },
-                "linkVirtualNetwork": true,
-                "Network": {
-                    "DelegatedSubnetResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/virtualNetworks/TestingRGvnet659/subnets/default",
-                    "PrivateDnsZoneResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/privateDnsZones/fortmu-db-test.private.postgres.database.azure.com",
-                    "PrivateDnsZoneArmResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/privateDnsZones/fortmu-db-test.private.postgres.database.azure.com"
-                }
-            }
+        "skuSizeMB": {
+            "value": 102400
         },
         "backupRetentionDays": {
             "value": 7
@@ -72,25 +29,16 @@
         "geoRedundantBackup": {
             "value": "Disabled"
         },
-        "availabilityZone": {
-            "value": ""
-        },
-        "vmName": {
-            "value": "Standard_B1ms"
-        },
-        "virtualNetworkDeploymentName": {
-            "value": "virtualNetwork_20220516T072251283Z"
-        },
-        "virtualNetworkLinkDeploymentName": {
-            "value": "virtualNetworkLink_20220516T072251283Z"
-        },
-        "privateDnsZoneDeploymentName": {
-            "value": "privateDnsZone_20220516T072251283Z"
+        "storageAutoGrow": {
+            "value": "Enabled"
         },
         "tags": {
             "value": {
-                "Environment": "Testing"
+                "Environment": "Test"
             }
+        },
+        "infrastructureEncryption": {
+            "value": "Disabled"
         },
         "administratorLogin": {
             "value": "fortmu"
@@ -98,8 +46,11 @@
         "administratorLoginPassword": {
             "value": "Password1234"
         },
+        "previewFeature": {
+            "value": ""
+        },
         "version": {
-            "value": "13"
+            "value": "11"
         }
     }
 }

@@ -1,0 +1,220 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "string"
+        },
+        "privateEndpointName": {
+            "type": "string"
+        },
+        "privateLinkResource": {
+            "type": "string"
+        },
+        "targetSubResource": {
+            "type": "array"
+        },
+        "requestMessage": {
+            "type": "string"
+        },
+        "subnet": {
+            "type": "string"
+        },
+        "virtualNetworkId": {
+            "type": "string"
+        },
+        "virtualNetworkResourceGroup": {
+            "type": "string"
+        },
+        "subnetDeploymentName": {
+            "type": "string"
+        },
+        "privateDnsDeploymentName": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "location": "[parameters('location')]",
+            "name": "[parameters('privateEndpointName')]",
+            "type": "Microsoft.Network/privateEndpoints",
+            "apiVersion": "2021-03-01",
+            "properties": {
+                "subnet": {
+                    "id": "[parameters('subnet')]"
+                },
+                "privateLinkServiceConnections": [
+                    {
+                        "name": "[parameters('privateEndpointName')]",
+                        "properties": {
+                            "privateLinkServiceId": "[parameters('privateLinkResource')]",
+                            "groupIds": "[parameters('targetSubResource')]"
+                        }
+                    }
+                ]
+            },
+            "tags": {
+                "Environment": "Test"
+            },
+            "dependsOn": [
+                "[parameters('subnetDeploymentName')]"
+            ]
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "[parameters('subnetDeploymentName')]",
+            "type": "Microsoft.Resources/deployments",
+            "resourceGroup": "[parameters('virtualNetworkResourceGroup')]",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "name": "Fortmu-test-vnet/FortmuTestSubnet",
+                            "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/Fortmu-G3-Test/providers/Microsoft.Network/virtualNetworks/Fortmu-test-vnet/subnets/FortmuTestSubnet",
+                            "properties": {
+                                "provisioningState": "Succeeded",
+                                "addressPrefix": "10.5.0.0/24",
+                                "ipConfigurations": [
+                                    {
+                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/Fortmu-G3-Test/providers/Microsoft.Network/networkInterfaces/fortmu-test-vm55/ipConfigurations/ipconfig1"
+                                    }
+                                ],
+                                "delegations": [],
+                                "privateEndpointNetworkPolicies": "Disabled",
+                                "privateLinkServiceNetworkPolicies": "Enabled"
+                            },
+                            "type": "Microsoft.Network/virtualNetworks/subnets",
+                            "apiVersion": "2021-01-01"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "[parameters('privateDnsDeploymentName')]",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[parameters('privateEndpointName')]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "apiVersion": "2017-05-10",
+                            "name": "PrivateDnsZone-a4c31db7-d647-4529-965f-788860a6d03e",
+                            "type": "Microsoft.Resources/deployments",
+                            "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
+                            "resourceGroup": "Fortmu-G3-Test",
+                            "properties": {
+                                "mode": "Incremental",
+                                "template": {
+                                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                                    "contentVersion": "1.0.0.0",
+                                    "resources": [
+                                        {
+                                            "type": "Microsoft.Network/privateDnsZones",
+                                            "apiVersion": "2018-09-01",
+                                            "name": "privatelink.postgres.database.azure.com",
+                                            "location": "global",
+                                            "tags": {
+                                                "Environment": "Test"
+                                            },
+                                            "properties": {}
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "VirtualNetworkLink-20220516133200",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[parameters('privateDnsDeploymentName')]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "apiVersion": "2017-05-10",
+                            "name": "VirtualNetworklink-a4c31db7-d647-4529-965f-788860a6d03f",
+                            "type": "Microsoft.Resources/deployments",
+                            "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
+                            "resourceGroup": "Fortmu-G3-Test",
+                            "properties": {
+                                "mode": "Incremental",
+                                "template": {
+                                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                                    "contentVersion": "1.0.0.0",
+                                    "resources": [
+                                        {
+                                            "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+                                            "apiVersion": "2018-09-01",
+                                            "name": "[concat('privatelink.postgres.database.azure.com', '/', uniqueString(parameters('virtualNetworkId')))]",
+                                            "location": "global",
+                                            "properties": {
+                                                "virtualNetwork": {
+                                                    "id": "[parameters('virtualNetworkId')]"
+                                                },
+                                                "registrationEnabled": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "DnsZoneGroup-20220516133200",
+            "type": "Microsoft.Resources/deployments",
+            "resourceGroup": "Fortmu-G3-Test",
+            "dependsOn": [
+                "[parameters('privateEndpointName')]",
+                "[parameters('privateDnsDeploymentName')]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+                            "apiVersion": "2021-03-01",
+                            "name": "[concat(parameters('privateEndpointName'), '/', 'default')]",
+                            "location": "[parameters('location')]",
+                            "properties": {
+                                "privateDnsZoneConfigs": [
+                                    {
+                                        "name": "privatelink-postgres-database-azure-com",
+                                        "properties": {
+                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/Fortmu-G3-Test/providers/Microsoft.Network/privateDnsZones/privatelink.postgres.database.azure.com"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

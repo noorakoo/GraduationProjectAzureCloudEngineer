@@ -5,7 +5,7 @@
         "location": {
             "type": "string"
         },
-        "networkInterfaceName1": {
+        "networkInterfaceName": {
             "type": "string"
         },
         "enableAcceleratedNetworking": {
@@ -20,16 +20,10 @@
         "subnetName": {
             "type": "string"
         },
-        "virtualNetworkName": {
+        "virtualNetworkId": {
             "type": "string"
         },
-        "addressPrefixes": {
-            "type": "array"
-        },
-        "subnets": {
-            "type": "array"
-        },
-        "publicIpAddressName1": {
+        "publicIpAddressName": {
             "type": "string"
         },
         "publicIpAddressType": {
@@ -44,10 +38,7 @@
         "virtualMachineName": {
             "type": "string"
         },
-        "virtualMachineName1": {
-            "type": "string"
-        },
-        "virtualMachineComputerName1": {
+        "virtualMachineComputerName": {
             "type": "string"
         },
         "virtualMachineRG": {
@@ -76,27 +67,23 @@
         },
         "enableHotpatching": {
             "type": "bool"
-        },
-        "zone": {
-            "type": "string"
         }
     },
     "variables": {
         "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]",
-        "vnetName": "[parameters('virtualNetworkName')]",
-        "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
+        "vnetId": "[parameters('virtualNetworkId')]",
+        "vnetName": "[last(split(variables('vnetId'), '/'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]"
     },
     "resources": [
         {
-            "name": "[parameters('networkInterfaceName1')]",
+            "name": "[parameters('networkInterfaceName')]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2021-03-01",
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]",
-                "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
-                "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName1'))]"
+                "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]"
             ],
             "properties": {
                 "ipConfigurations": [
@@ -108,7 +95,7 @@
                             },
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIpAddress": {
-                                "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName1'))]",
+                                "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]",
                                 "properties": {
                                     "deleteOption": "[parameters('pipDeleteOption')]"
                                 }
@@ -122,7 +109,7 @@
                 }
             },
             "tags": {
-                "Environment": "Testing"
+                "Environment": "Test"
             }
         },
         {
@@ -134,26 +121,11 @@
                 "securityRules": "[parameters('networkSecurityGroupRules')]"
             },
             "tags": {
-                "Environment": "Testing"
+                "Environment": "Test"
             }
         },
         {
-            "name": "[parameters('virtualNetworkName')]",
-            "type": "Microsoft.Network/virtualNetworks",
-            "apiVersion": "2020-11-01",
-            "location": "[parameters('location')]",
-            "properties": {
-                "addressSpace": {
-                    "addressPrefixes": "[parameters('addressPrefixes')]"
-                },
-                "subnets": "[parameters('subnets')]"
-            },
-            "tags": {
-                "Environment": "Testing"
-            }
-        },
-        {
-            "name": "[parameters('publicIpAddressName1')]",
+            "name": "[parameters('publicIpAddressName')]",
             "type": "Microsoft.Network/publicIpAddresses",
             "apiVersion": "2020-08-01",
             "location": "[parameters('location')]",
@@ -163,20 +135,17 @@
             "sku": {
                 "name": "[parameters('publicIpAddressSku')]"
             },
-            "zones": [
-                "1"
-            ],
             "tags": {
-                "Environment": "Testing"
+                "Environment": "Test"
             }
         },
         {
-            "name": "[parameters('virtualMachineName1')]",
+            "name": "[parameters('virtualMachineName')]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-07-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName1'))]"
+                "[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]"
             ],
             "properties": {
                 "hardwareProfile": {
@@ -200,7 +169,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName1'))]",
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName'))]",
                             "properties": {
                                 "deleteOption": "[parameters('nicDeleteOption')]"
                             }
@@ -208,7 +177,7 @@
                     ]
                 },
                 "osProfile": {
-                    "computerName": "[parameters('virtualMachineComputerName1')]",
+                    "computerName": "[parameters('virtualMachineComputerName')]",
                     "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
@@ -227,11 +196,8 @@
                 }
             },
             "tags": {
-                "Environment": "Testing"
-            },
-            "zones": [
-                "1"
-            ]
+                "Environment": "Test"
+            }
         }
     ],
     "outputs": {
