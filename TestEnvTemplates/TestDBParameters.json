@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "serverName": {
-            "value": "fortmu-test-db"
+            "value": "fortmu-db-test"
         },
         "location": {
             "value": "northeurope"
         },
         "serverEdition": {
-            "value": "GeneralPurpose"
+            "value": "Burstable"
         },
         "storageSizeGB": {
-            "value": 128
+            "value": 32
         },
         "haEnabled": {
             "value": "Disabled"
@@ -20,6 +20,50 @@
         "firewallRules": {
             "value": {
                 "rules": []
+            }
+        },
+        "vnetData": {
+            "value": {
+                "isLoading": false,
+                "virtualNetworkName": "TestingRGvnet659",
+                "virtualNetworkId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/virtualNetworks/TestingRGvnet659",
+                "subnetName": "default",
+                "virtualNetworkSubscriptionName": "Azure subscription 1",
+                "virtualNetworkAddressPrefix": "10.1.0.0/24",
+                "virtualNetworkResourceGroupName": "TestingRG",
+                "location": "northeurope",
+                "subscriptionId": "e4305bfa-9413-4c0e-8527-8f5307a80a27",
+                "subnetProperties": {
+                    "addressPrefix": "10.1.0.0/24",
+                    "delegations": [
+                        {
+                            "name": "dlg-Microsoft.DBforPostgreSQL-flexibleServers",
+                            "properties": {
+                                "serviceName": "Microsoft.DBforPostgreSQL/flexibleServers"
+                            }
+                        }
+                    ]
+                },
+                "subnetNeedsUpdate": false,
+                "isNewVnet": true,
+                "delegatedSubnetArguments": {
+                    "SubnetArmResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/virtualNetworks/TestingRGvnet659/subnets/default"
+                },
+                "usePrivateDnsZone": true,
+                "isNewPrivateDnsZone": true,
+                "privateDnsResourceGroup": "TestingRG",
+                "privateDnsSubscriptionId": "e4305bfa-9413-4c0e-8527-8f5307a80a27",
+                "privateDnsZoneName": "fortmu-db-test.private.postgres.database.azure.com",
+                "privateDnsZoneSubscription": "Azure subscription 1",
+                "privateDnsZoneArguments": {
+                    "PrivateDnsZoneArmResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/privateDnsZones/fortmu-db-test.private.postgres.database.azure.com"
+                },
+                "linkVirtualNetwork": true,
+                "Network": {
+                    "DelegatedSubnetResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/virtualNetworks/TestingRGvnet659/subnets/default",
+                    "PrivateDnsZoneResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/privateDnsZones/fortmu-db-test.private.postgres.database.azure.com",
+                    "PrivateDnsZoneArmResourceId": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/TestingRG/providers/Microsoft.Network/privateDnsZones/fortmu-db-test.private.postgres.database.azure.com"
+                }
             }
         },
         "backupRetentionDays": {
@@ -32,15 +76,24 @@
             "value": ""
         },
         "vmName": {
-            "value": "Standard_D2ds_v4"
+            "value": "Standard_B1ms"
+        },
+        "virtualNetworkDeploymentName": {
+            "value": "virtualNetwork_20220516T072251283Z"
+        },
+        "virtualNetworkLinkDeploymentName": {
+            "value": "virtualNetworkLink_20220516T072251283Z"
+        },
+        "privateDnsZoneDeploymentName": {
+            "value": "privateDnsZone_20220516T072251283Z"
         },
         "tags": {
             "value": {
-                "Owner": "Fortmu"
+                "Environment": "Testing"
             }
         },
         "administratorLogin": {
-            "value": "postgres"
+            "value": "fortmu"
         },
         "administratorLoginPassword": {
             "value": "Password1234"

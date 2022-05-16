@@ -6,13 +6,13 @@
             "value": "northeurope"
         },
         "networkInterfaceName1": {
-            "value": "fortmu-testvm315_z1"
+            "value": "test-vm770_z1"
         },
         "enableAcceleratedNetworking": {
             "value": true
         },
         "networkSecurityGroupName": {
-            "value": "fortmu-testvm-nsg"
+            "value": "test-vm-nsg"
         },
         "networkSecurityGroupRules": {
             "value": [
@@ -39,7 +39,7 @@
         },
         "addressPrefixes": {
             "value": [
-                "10.3.0.0/16"
+                "10.0.0.0/16"
             ]
         },
         "subnets": {
@@ -47,13 +47,13 @@
                 {
                     "name": "default",
                     "properties": {
-                        "addressPrefix": "10.3.0.0/24"
+                        "addressPrefix": "10.0.0.0/24"
                     }
                 }
             ]
         },
         "publicIpAddressName1": {
-            "value": "fortmu-testvm-ip"
+            "value": "test-vm-ip"
         },
         "publicIpAddressType": {
             "value": "Static"
@@ -65,25 +65,25 @@
             "value": "Detach"
         },
         "virtualMachineName": {
-            "value": "fortmu-testvm"
+            "value": "test-vm"
         },
         "virtualMachineName1": {
-            "value": "fortmu-testvm"
+            "value": "test-vm"
         },
         "virtualMachineComputerName1": {
-            "value": "fortmu-testvm"
+            "value": "test-vm"
         },
         "virtualMachineRG": {
             "value": "TestingRG"
         },
         "osDiskType": {
-            "value": "Premium_LRS"
+            "value": "StandardSSD_LRS"
         },
         "osDiskDeleteOption": {
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_E2s_v3"
+            "value": "Standard_D2as_v4"
         },
         "nicDeleteOption": {
             "value": "Detach"

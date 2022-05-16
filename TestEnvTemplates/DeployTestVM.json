@@ -122,7 +122,7 @@
                 }
             },
             "tags": {
-                "Owner": "Fortmu"
+                "Environment": "Testing"
             }
         },
         {
@@ -134,7 +134,7 @@
                 "securityRules": "[parameters('networkSecurityGroupRules')]"
             },
             "tags": {
-                "Owner": "Fortmu"
+                "Environment": "Testing"
             }
         },
         {
@@ -149,7 +149,7 @@
                 "subnets": "[parameters('subnets')]"
             },
             "tags": {
-                "Owner": "Fortmu"
+                "Environment": "Testing"
             }
         },
         {
@@ -167,7 +167,7 @@
                 "1"
             ],
             "tags": {
-                "Owner": "Fortmu"
+                "Environment": "Testing"
             }
         },
         {
@@ -227,7 +227,7 @@
                 }
             },
             "tags": {
-                "Owner": "Fortmu"
+                "Environment": "Testing"
             },
             "zones": [
                 "1"
