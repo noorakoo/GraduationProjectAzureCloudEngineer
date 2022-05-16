@@ -1,7 +1,7 @@
 import os
 
 # Signing in and setting the subscription
-SubscriptionId = 'e4305bfa-9413-4c0e-8527-8f5307a80a27'
+SubscriptionId = 'e4305bfa-9413-4c0e-8527-8f5307a80a27' #academys
 Location = 'northeurope'
 os.system('az login')
 os.system(f'az account set --subscription {SubscriptionId}')
