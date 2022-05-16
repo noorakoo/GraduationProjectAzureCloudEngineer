@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "serverName": {
-            "value": "fortmu-test-db"
+            "value": "fortmu-prod-db"
         },
         "location": {
             "value": "northeurope"
