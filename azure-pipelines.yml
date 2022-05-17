@@ -4,78 +4,24 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- none
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-
-
-
-# TEST PIPELINES FOR RUNNING .PY FILES:
-
-# trigger:
-# - none
-
-# pool:
-#   vmImage: ubuntu-latest
-
-# # Run a conditioned Python file
-# jobs:
-#   - job: DeployVM
-#   - deployment: DeployVirtualMachine
-#     displayName: deploy Virtual Machine 
-#     pool:
-#       vmImage: 'ubuntu-latest'
-#     environment: 'Test'
-#     strategy:
-#       runOnce:
-#         deploy:
-#           steps:
-#           - checkout: self
-#           - task: PythonScript@0
-#             inputs:
-#               scriptSource: 'filePath'
-#               scriptPath: CreateResources.py
-
-#   - job: ResizeVM
-#     condition: eq(variables['Build.Reason'], 'Manual')
-#     steps:
-#       - task: PythonScript@0
-#         inputs:
-#           scriptSource: 'filePath'
-#           scriptPath: ResizeVM.py
-
-
-# # Run a simple Python file
-
-# jobs:
-#   - job: A
-#     steps:
-#       - task: PythonScript@0
-#         inputs:
-#           scriptSource: 'filePath'
-#           scriptPath: CreateResources.py
-#   - job: B 
-#     dependsOn: A 
-#     steps:
-#       - task: PythonScript@0
-#         inputs:
-#           scriptSource: 'filePath'
-#           scriptPath: ResizeVM.py
-
-# steps:
-#   - task: PythonScript@0
-#     inputs:
-#       scriptSource: 'filePath'
-#       scriptPath: CreateResources.py
-
+# Run Python files manually
+jobs:
+  - job: DeployResources
+    condition: eq(variables['Build.Reason'], 'Manual')
+    steps:
+      - task: PythonScript@0
+        inputs:
+          scriptSource: 'filePath'
+          scriptPath: CreateResources.py
+  - job: ResizeVM
+    condition: eq(variables['Build.Reason'], 'Manual')
+    steps:
+      - task: PythonScript@0
+        inputs:
+          scriptSource: 'filePath'
+          scriptPath: ResizeVM.py
