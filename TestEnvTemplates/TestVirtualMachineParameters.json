@@ -1,0 +1,156 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "northeurope"
+        },
+        "networkInterfaceName": {
+            "value": "fortmutestvm610"
+        },
+        "enableAcceleratedNetworking": {
+            "value": true
+        },
+        "networkSecurityGroupName": {
+            "value": "FortmuTestVM-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "HTTPS",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "443"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "FortmuTestSubnet"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet"
+        },
+        "publicIpAddressName": {
+            "value": "FortmuTestVM-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "FortmuTestVM"
+        },
+        "virtualMachineComputerName": {
+            "value": "FortmuTestVM"
+        },
+        "virtualMachineRG": {
+            "value": "FortmuDemoTest"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "adminUsername": {
+            "value": "fortmutest"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "fortmudemotestdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/fortmudemotestdiag"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountKind": {
+            "value": "Storage"
+        },
+        "backupVaultName": {
+            "value": "FortmuDemoTestRecoveryVault"
+        },
+        "backupFabricName": {
+            "value": "Azure"
+        },
+        "backupVaultRGName": {
+            "value": "FortmuDemoTest"
+        },
+        "backupVaultRGIsNew": {
+            "value": false
+        },
+        "backupPolicyName": {
+            "value": "EnhancedPolicy-l3a0ge6h"
+        },
+        "backupPolicySchedule": {
+            "value": {
+                "schedulePolicyType": "SimpleSchedulePolicyV2",
+                "scheduleRunFrequency": "Hourly",
+                "hourlySchedule": {
+                    "interval": 4,
+                    "scheduleWindowStartTime": "2021-07-26T08:00:00Z",
+                    "scheduleWindowDuration": 12
+                }
+            }
+        },
+        "backupPolicyRetention": {
+            "value": {
+                "retentionPolicyType": "LongTermRetentionPolicy",
+                "dailySchedule": {
+                    "retentionTimes": [
+                        "2022-05-17T04:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                        "count": 30,
+                        "durationType": "Days"
+                    }
+                },
+                "weeklySchedule": null,
+                "monthlySchedule": null,
+                "yearlySchedule": null
+            }
+        },
+        "backupPolicyTimeZone": {
+            "value": "UTC"
+        },
+        "backupInstantRpRetentionRangeInDays": {
+            "value": 7
+        },
+        "backupInstantRPDetails": {
+            "value": {
+                "azureBackupRGNamePrefix": "",
+                "azureBackupRGNameSuffix": ""
+            }
+        },
+        "backupItemName": {
+            "value": "vm;iaasvmcontainerv2;FortmuDemoTest;FortmuTestVM"
+        }
+    }
+}

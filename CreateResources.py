@@ -6,7 +6,7 @@ Location = 'northeurope'
 os.system('az login')
 os.system(f'az account set --subscription {SubscriptionId}')
 
-# Creating the environment / Resource Group
+# Creating the environment / Resource Group and Template
 ResourceGroup = 'FortmuAppTeam'
 Location = 'northeurope'
 TemplateName = 'FortmuTemplate'
@@ -31,6 +31,8 @@ os.system(f'az deployment group create --name {TemplateName} --resource-group {R
 # Deploying the Web App & App Service Plan
 
 # Deploying the Private Link for the Web App
+
+# Deploying the Key Vault
 
 
 

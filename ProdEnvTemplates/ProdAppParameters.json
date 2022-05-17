@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c"
+        },
+        "name": {
+            "value": "fortmuprodapp"
+        },
+        "location": {
+            "value": "North Europe"
+        },
+        "hostingPlanName": {
+            "value": "FortmuProdAppPlan"
+        },
+        "serverFarmResourceGroup": {
+            "value": "FortmuDemoProd"
+        },
+        "alwaysOn": {
+            "value": true
+        },
+        "sku": {
+            "value": "PremiumV2"
+        },
+        "skuCode": {
+            "value": "P2v2"
+        },
+        "workerSize": {
+            "value": "4"
+        },
+        "workerSizeId": {
+            "value": "4"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "currentStack": {
+            "value": "dotnetcore"
+        },
+        "phpVersion": {
+            "value": "OFF"
+        },
+        "errorLink": {
+            "value": "https://fortmuprodapp.scm.azurewebsites.net/detectors?type=tools&name=eventviewer"
+        }
+    }
+}

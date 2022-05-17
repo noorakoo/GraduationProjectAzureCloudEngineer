@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "northeurope"
+        },
+        "privateEndpointName": {
+            "value": "FortmuPrivateLinkApp"
+        },
+        "privateLinkResource": {
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Web/sites/fortmuprodapp"
+        },
+        "targetSubResource": {
+            "value": [
+                "sites"
+            ]
+        },
+        "requestMessage": {
+            "value": ""
+        },
+        "subnet": {
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Network/virtualNetworks/FortmuProdVnet/subnets/FortmuProdSubnet"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Network/virtualNetworks/FortmuProdVnet"
+        },
+        "subnetDeploymentName": {
+            "value": "UpdateSubnetDeployment-20220517145321"
+        },
+        "virtualNetworkResourceGroup": {
+            "value": "FortmuDemoProd"
+        },
+        "privateDnsDeploymentName": {
+            "value": "PrivateDns-20220517145321"
+        }
+    }
+}

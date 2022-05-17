@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "northeurope"
+        },
+        "extendedLocation": {
+            "value": {}
+        },
+        "virtualNetworkName": {
+            "value": "FortmuProdVnet"
+        },
+        "resourceGroup": {
+            "value": "FortmuDemoProd"
+        },
+        "addressSpaces": {
+            "value": [
+                "10.7.0.0/16"
+            ]
+        },
+        "ipv6Enabled": {
+            "value": false
+        },
+        "subnetCount": {
+            "value": 1
+        },
+        "subnet0_name": {
+            "value": "FortmuProdSubnet"
+        },
+        "subnet0_addressRange": {
+            "value": "10.7.0.0/24"
+        },
+        "ddosProtectionPlanEnabled": {
+            "value": false
+        },
+        "firewallEnabled": {
+            "value": false
+        },
+        "bastionEnabled": {
+            "value": true
+        },
+        "bastionName": {
+            "value": "FortmuProdBastionHost"
+        },
+        "bastionSubnetAddressSpace": {
+            "value": "10.7.1.0/24"
+        },
+        "publicIpAddressForBastion": {
+            "value": "FortmuProdBastionIp"
+        }
+    }
+}
