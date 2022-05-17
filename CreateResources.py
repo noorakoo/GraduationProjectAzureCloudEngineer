@@ -32,6 +32,8 @@ os.system(f'az deployment group create --name {TemplateName} --resource-group {R
 
 # Deploying the Private Link for Web App
 
+# Deploying the Monitoring Dashboard
+
 
 
 
