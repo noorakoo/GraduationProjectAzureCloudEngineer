@@ -26,13 +26,12 @@ TemplateFile = 'TestEnvTemplates/DeployTestDB.json'
 ParameterFile = '@TestEnvTemplates/TestDBParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
-# Deploying the Private Link for the Database
+# Deploying the Private Link for Database
 
 # Deploying the Web App & App Service Plan
 
-# Deploying the Private Link for the Web App
+# Deploying the Private Link for Web App
 
-# Deploying the Key Vault
 
 
 
