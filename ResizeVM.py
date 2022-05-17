@@ -6,7 +6,7 @@ ResourceGroup = ''
 VirtualMachine = ''
 Size = ''
 
-# Run to list available Virtual Machine sizes:
+# Run in terminal to list available Virtual Machine sizes:
 # os.system(f'az vm list-vm-resize-options {ResourceGroup} --name {VirtualMachine} --output table')
 
 os.system('az login')
