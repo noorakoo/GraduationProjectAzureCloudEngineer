@@ -10,6 +10,3 @@ How to get started with your platform for building Apps:
 
 # Build and Test
 TODO: Describe and show how to build your code and run the tests. 
-
-test
-
