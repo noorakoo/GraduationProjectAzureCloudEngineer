@@ -1,5 +1,6 @@
 import os
 
+
 # Signing in and setting the subscription
 SubscriptionId = 'e4305bfa-9413-4c0e-8527-8f5307a80a27' 
 Location = 'northeurope'
@@ -20,6 +21,9 @@ ParameterFile = '@TestEnvTemplates/TestVMParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Virtual Machine 2
+TemplateFile = 'TestEnvTemplates/DeployTestVM.json'
+ParameterFile = '@TestEnvTemplates/TestVMParameters.json'
+os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the PostgreSQL Database
 TemplateFile = 'TestEnvTemplates/DeployTestDB.json'
@@ -32,7 +36,6 @@ os.system(f'az deployment group create --name {TemplateName} --resource-group {R
 
 # Deploying the Private Link for Web App
 
-# Deploying the Monitoring Dashboard
 
 
 

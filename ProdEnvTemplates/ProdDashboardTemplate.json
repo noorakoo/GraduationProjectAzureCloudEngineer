@@ -1,0 +1,555 @@
+{
+    "properties": {
+      "lenses": {
+        "0": {
+          "order": 0,
+          "parts": {
+            "0": {
+              "position": {
+                "x": 0,
+                "y": 0,
+                "colSpan": 4,
+                "rowSpan": 2
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "userObjectId",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "startDate",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "endDate",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "fromAppsTile",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/Microsoft_AAD_IAM/PartType/UsersActivitySummaryReportPart"
+              }
+            },
+            "1": {
+              "position": {
+                "x": 4,
+                "y": 0,
+                "colSpan": 2,
+                "rowSpan": 2
+              },
+              "metadata": {
+                "inputs": [],
+                "type": "Extension/HubsExtension/PartType/ClockPart",
+                "settings": {}
+              }
+            },
+            "2": {
+              "position": {
+                "x": 6,
+                "y": 0,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "options",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "sharedTimeRange",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                "settings": {
+                  "content": {
+                    "options": {
+                      "chart": {
+                        "metrics": [
+                          {
+                            "resourceMetadata": {
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                            },
+                            "name": "Available Memory Bytes",
+                            "aggregationType": 4,
+                            "namespace": "microsoft.compute/virtualmachines",
+                            "metricVisualization": {
+                              "displayName": "Available Memory Bytes (Preview)",
+                              "resourceDisplayName": "FortmuVM"
+                            }
+                          }
+                        ],
+                        "title": "Avg Available Memory Bytes (Preview) for FortmuVM",
+                        "titleKind": 1,
+                        "visualization": {
+                          "chartType": 2,
+                          "legendVisualization": {
+                            "isVisible": true,
+                            "position": 2,
+                            "hideSubtitle": false
+                          },
+                          "axisVisualization": {
+                            "x": {
+                              "isVisible": true,
+                              "axisType": 2
+                            },
+                            "y": {
+                              "isVisible": true,
+                              "axisType": 1
+                            }
+                          },
+                          "disablePinning": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "3": {
+              "position": {
+                "x": 12,
+                "y": 0,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "options",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "sharedTimeRange",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                "settings": {
+                  "content": {
+                    "options": {
+                      "chart": {
+                        "metrics": [
+                          {
+                            "resourceMetadata": {
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                            },
+                            "name": "CPU Credits Consumed",
+                            "aggregationType": 4,
+                            "namespace": "microsoft.compute/virtualmachines",
+                            "metricVisualization": {
+                              "displayName": "CPU Credits Consumed",
+                              "resourceDisplayName": "FortmuVM"
+                            }
+                          }
+                        ],
+                        "title": "Avg CPU Credits Consumed for FortmuVM",
+                        "titleKind": 1,
+                        "visualization": {
+                          "chartType": 2,
+                          "legendVisualization": {
+                            "isVisible": true,
+                            "position": 2,
+                            "hideSubtitle": false
+                          },
+                          "axisVisualization": {
+                            "x": {
+                              "isVisible": true,
+                              "axisType": 2
+                            },
+                            "y": {
+                              "isVisible": true,
+                              "axisType": 1
+                            }
+                          },
+                          "disablePinning": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "position": {
+                "x": 0,
+                "y": 2,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "resourceType",
+                    "value": "Microsoft.Resources/subscriptions/resourcegroups",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "filter",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "scope",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "kind",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/BrowseResourceGroupPinnedPart"
+              }
+            },
+            "5": {
+              "position": {
+                "x": 6,
+                "y": 4,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "options",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "sharedTimeRange",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                "settings": {
+                  "content": {
+                    "options": {
+                      "chart": {
+                        "metrics": [
+                          {
+                            "resourceMetadata": {
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                            },
+                            "name": "Percentage CPU",
+                            "aggregationType": 4,
+                            "namespace": "microsoft.compute/virtualmachines",
+                            "metricVisualization": {
+                              "displayName": "Percentage CPU",
+                              "resourceDisplayName": "FortmuVM"
+                            }
+                          }
+                        ],
+                        "title": "Avg Percentage CPU for FortmuVM",
+                        "titleKind": 1,
+                        "visualization": {
+                          "chartType": 2,
+                          "legendVisualization": {
+                            "isVisible": true,
+                            "position": 2,
+                            "hideSubtitle": false
+                          },
+                          "axisVisualization": {
+                            "x": {
+                              "isVisible": true,
+                              "axisType": 2
+                            },
+                            "y": {
+                              "isVisible": true,
+                              "axisType": 1
+                            }
+                          },
+                          "disablePinning": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "6": {
+              "position": {
+                "x": 12,
+                "y": 4,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "options",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "sharedTimeRange",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                "settings": {
+                  "content": {
+                    "options": {
+                      "chart": {
+                        "metrics": [
+                          {
+                            "resourceMetadata": {
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                            },
+                            "name": "Inbound Flows",
+                            "aggregationType": 4,
+                            "namespace": "microsoft.compute/virtualmachines",
+                            "metricVisualization": {
+                              "displayName": "Inbound Flows",
+                              "resourceDisplayName": "FortmuVM"
+                            }
+                          }
+                        ],
+                        "title": "Avg Inbound Flows for FortmuVM",
+                        "titleKind": 1,
+                        "visualization": {
+                          "chartType": 2,
+                          "legendVisualization": {
+                            "isVisible": true,
+                            "position": 2,
+                            "hideSubtitle": false
+                          },
+                          "axisVisualization": {
+                            "x": {
+                              "isVisible": true,
+                              "axisType": 2
+                            },
+                            "y": {
+                              "isVisible": true,
+                              "axisType": 1
+                            }
+                          },
+                          "disablePinning": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "7": {
+              "position": {
+                "x": 0,
+                "y": 8,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "name",
+                    "value": "Application map"
+                  },
+                  {
+                    "name": "assetType",
+                    "value": "ApplicationInsights"
+                  },
+                  {
+                    "name": "assetExtension",
+                    "value": "AppInsightsExtension"
+                  },
+                  {
+                    "name": "description",
+                    "value": "Application Map helps you spot performance bottlenecks or failure hotspots across all components of your distributed application.",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "icon",
+                    "value": {
+                      "type": 1,
+                      "data": "<svg viewBox='0 0 80 80' class='msportalfx-svg-placeholder' role='presentation' focusable='false' xmlns:svg='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g><title></title><path fill='#C8C6C4' d='M8 8h24v6H8zm26 0h10v6H34z'/><circle cx='14' cy='56' r='6' fill='#C4C4C4'/><circle cx='46' cy='66' r='6' fill='#C4C4C4'/><circle cx='66' cy='46' r='6' fill='#C4C4C4'/><circle cx='60' cy='25' r='6' fill='#C4C4C4'/><path d='m17 52 11-15m17 27L34 37m32 8.5L36 33m28.5-7-32 5' stroke='#C4C4C4' stroke-width='2'/><circle cx='32' cy='32' r='8' fill='#0078D4'/></g></svg>"
+                    },
+                    "isOptional": true
+                  },
+                  {
+                    "name": "mutatedPartType",
+                    "value": "AppMapGalPt"
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/UnboundPart"
+              }
+            },
+            "8": {
+              "position": {
+                "x": 6,
+                "y": 8,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "options",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "sharedTimeRange",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                "settings": {
+                  "content": {
+                    "options": {
+                      "chart": {
+                        "metrics": [
+                          {
+                            "resourceMetadata": {
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                            },
+                            "name": "CPU Credits Remaining",
+                            "aggregationType": 4,
+                            "namespace": "microsoft.compute/virtualmachines",
+                            "metricVisualization": {
+                              "displayName": "CPU Credits Remaining",
+                              "resourceDisplayName": "FortmuVM"
+                            }
+                          }
+                        ],
+                        "title": "Avg CPU Credits Remaining for FortmuVM",
+                        "titleKind": 1,
+                        "visualization": {
+                          "chartType": 2,
+                          "legendVisualization": {
+                            "isVisible": true,
+                            "position": 2,
+                            "hideSubtitle": false
+                          },
+                          "axisVisualization": {
+                            "x": {
+                              "isVisible": true,
+                              "axisType": 2
+                            },
+                            "y": {
+                              "isVisible": true,
+                              "axisType": 1
+                            }
+                          },
+                          "disablePinning": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "9": {
+              "position": {
+                "x": 12,
+                "y": 8,
+                "colSpan": 6,
+                "rowSpan": 4
+              },
+              "metadata": {
+                "inputs": [
+                  {
+                    "name": "options",
+                    "isOptional": true
+                  },
+                  {
+                    "name": "sharedTimeRange",
+                    "isOptional": true
+                  }
+                ],
+                "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                "settings": {
+                  "content": {
+                    "options": {
+                      "chart": {
+                        "metrics": [
+                          {
+                            "resourceMetadata": {
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.DBforPostgreSQL/servers/fortmudbserver"
+                            },
+                            "name": "storage_used",
+                            "aggregationType": 4,
+                            "namespace": "microsoft.dbforpostgresql/servers",
+                            "metricVisualization": {
+                              "displayName": "Storage used",
+                              "resourceDisplayName": "fortmudbserver"
+                            }
+                          }
+                        ],
+                        "title": "Avg Storage used for fortmudbserver",
+                        "titleKind": 1,
+                        "visualization": {
+                          "chartType": 2,
+                          "legendVisualization": {
+                            "isVisible": true,
+                            "position": 2,
+                            "hideSubtitle": false
+                          },
+                          "axisVisualization": {
+                            "x": {
+                              "isVisible": true,
+                              "axisType": 2
+                            },
+                            "y": {
+                              "isVisible": true,
+                              "axisType": 1
+                            }
+                          },
+                          "disablePinning": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "model": {
+          "timeRange": {
+            "value": {
+              "relative": {
+                "duration": 24,
+                "timeUnit": 1
+              }
+            },
+            "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+          },
+          "filterLocale": {
+            "value": "en-us"
+          },
+          "filters": {
+            "value": {
+              "MsPortalFx_TimeRange": {
+                "model": {
+                  "format": "utc",
+                  "granularity": "auto",
+                  "relative": "24h"
+                },
+                "displayCache": {
+                  "name": "UTC Time",
+                  "value": "Past 24 hours"
+                },
+                "filteredPartIds": [
+                  "StartboardPart-MonitorChartPart-7ecb1a01-7917-49ee-88d2-2d3d3abbe0d8",
+                  "StartboardPart-MonitorChartPart-7ecb1a01-7917-49ee-88d2-2d3d3abbe0ea",
+                  "StartboardPart-MonitorChartPart-7ecb1a01-7917-49ee-88d2-2d3d3abbe0f6",
+                  "StartboardPart-MonitorChartPart-7ecb1a01-7917-49ee-88d2-2d3d3abbe102",
+                  "StartboardPart-MonitorChartPart-7ecb1a01-7917-49ee-88d2-2d3d3abbe11b",
+                  "StartboardPart-MonitorChartPart-7ecb1a01-7917-49ee-88d2-2d3d3abbe127"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "name": "IACDashboard",
+    "type": "Microsoft.Portal/dashboards",
+    "location": "northeurope",
+    "tags": {
+      "hidden-title": "IACDashboard"
+    },
+    "apiVersion": "2015-08-01-preview"
+  }
