@@ -14,10 +14,12 @@ os.system(f'az group create --name {ResourceGroup} --location {Location}')
 
 # Deploying the Virtual Network
  
-# Deploying the Virtual Machine
+# Deploying the Virtual Machine 1
 TemplateFile = 'TestEnvTemplates/DeployTestVM.json'
 ParameterFile = '@TestEnvTemplates/TestVMParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
+
+# Deploying the Virtual Machine 2
 
 # Deploying the PostgreSQL Database
 TemplateFile = 'TestEnvTemplates/DeployTestDB.json'
