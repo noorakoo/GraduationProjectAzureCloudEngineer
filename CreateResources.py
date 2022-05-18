@@ -14,49 +14,31 @@ TemplateName = 'FortmuTemplate'
 os.system(f'az group create --name {ResourceGroup} --location {Location}')
 
 # Deploying the Virtual Network
- 
+TemplateFile = 'TestEnvTemplates/TestVirtualNetworkTemplate.json'
+ParameterFile = '@TestEnvTemplates/TestVirtualNetworkParameters.json'
+os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
+
 # Deploying the Virtual Machine 1
-TemplateFile = 'TestEnvTemplates/DeployTestVM.json'
-ParameterFile = '@TestEnvTemplates/TestVMParameters.json'
+TemplateFile = 'TestEnvTemplates/TestVirtualMachineTemplate.json'
+ParameterFile = '@TestEnvTemplates/TestVirtualMachineParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
-# Deploying the Virtual Machine 2
-TemplateFile = 'TestEnvTemplates/DeployTestVM.json'
-ParameterFile = '@TestEnvTemplates/TestVMParameters.json'
-os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
-
-# Deploying the PostgreSQL Database
-TemplateFile = 'TestEnvTemplates/DeployTestDB.json'
-ParameterFile = '@TestEnvTemplates/TestDBParameters.json'
-os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
+# # Deploying the PostgreSQL Database
+# TemplateFile = 'TestEnvTemplates/DeployTestDB.json'
+# ParameterFile = '@TestEnvTemplates/TestDBParameters.json'
+# os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Private Link for Database
+TemplateFile = 'TestEnvTemplates/TestDBPrivateLinkTemplate.json'
+ParameterFile = '@TestEnvTemplates/TestDBPrivateLinkParameters.json'
+os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Web App & App Service Plan
+TemplateFile = 'TestEnvTemplates/TestAppTemplate.json'
+ParameterFile = '@TestEnvTemplates/TestAppParameters.json'
+os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Private Link for Web App
-
-
-
-
-
-
-
-
-
-# # Creating the production environment
-# ResourceGroup = 'ProductionRG'
-# TemplateName = 'ProductionTemplate'
-# os.system(f'az group create --name {ResourceGroup} --location {Location}')
-
-# # Deploying two production VMs
-# TemplateFile = 'ProdEnvTemplates/DeployProdVM.json'
-# ParameterFile = '@ProdEnvTemplates/ProdVM1Parameters.json'
-# os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
-# ParameterFile = '@ProdEnvTemplates/ProdVM2Parameters.json'
-# os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
-
-# # Deploying the production database
-# TemplateFile = 'ProdEnvTemplates/DeployProdDB.json'
-# ParameterFile = '@ProdEnvTemplates/ProdDBParameters.json'
-# os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
+TemplateFile = 'TestEnvTemplates/TestAppPrivateLinkTemplate.json'
+ParameterFile = '@TestEnvTemplates/TestAppPrivateLinkParameters.json'
+os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
