@@ -48,6 +48,10 @@ ParameterFile = '@TestEnvTemplates/TestAppPrivateLinkParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Dashboard
-TemplateFile = 'TestEnvTemplates/TestDashboardTemplate.json'
+TemplateFile = 'TestEnvTemplates/TestDashboard.json'
 DashboardName = 'TestDashboard'
 os.system(f'az portal dashboard import --resource-group {ResourceGroup} --name {DashboardName} --input-path {TemplateFile}')
+
+# Deploying the Budget
+TemplateFile = 'TestEnvTemplates/TestBudget.json'
+os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile}')
