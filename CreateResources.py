@@ -9,7 +9,7 @@ os.system(f'az account set --subscription {SubscriptionId}')
 # Creating the environment / Resource Group and Template
 ResourceGroup = 'FortmuAppTeam'
 Location = 'northeurope'
-TemplateName = 'FortmuTemplate'
+TemplateName = 'FortmuTemp'
 os.system(f'az group create --name {ResourceGroup} --location {Location}')
 
 # Deploying the Virtual Network
