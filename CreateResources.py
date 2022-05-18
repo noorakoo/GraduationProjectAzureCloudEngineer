@@ -22,6 +22,11 @@ TemplateFile = 'TestEnvTemplates/TestVirtualMachineTemplate.json'
 ParameterFile = '@TestEnvTemplates/TestVirtualMachineParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
+# #Deploying the Virtual Machine 2
+# TemplateFile = ''
+# ParameterFile = '@'
+# os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
+
 # Deploying the PostgreSQL Database
 TemplateFile = 'TestEnvTemplates/TestDatabaseTemplate.json'
 ParameterFile = '@TestEnvTemplates/TestDatabaseParameter.json'
