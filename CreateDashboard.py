@@ -8,5 +8,5 @@ os.system('az login')
 os.system(f'az account set --subscription {SubscriptionId}')
 
 ResourceGroup = 'FortmuAppTeam'
-Template = 'Template.json'
+Template = 'TestDashboardTemplate.json'
 os.system(f'az portal dashboard import --resource-group {ResourceGroup} --name "DashboardFortmu" --input-path {Template}')
