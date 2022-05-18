@@ -594,7 +594,7 @@
   },
   "name": "TestDashboard",
   "type": "Microsoft.Portal/dashboards",
-  "location": "INSERT LOCATION",
+  "location": "northeurope",
   "tags": {
     "hidden-title": "TestDashboard"
   },
