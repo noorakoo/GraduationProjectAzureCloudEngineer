@@ -83,10 +83,10 @@
             "value": false
         },
         "diagnosticsStorageAccountName": {
-            "value": "FortmuAppTeamdiag"
+            "value": "fortmuappteamdiag"
         },
         "diagnosticsStorageAccountId": {
-            "value": "Microsoft.Storage/storageAccounts/FortmuAppTeamdiag"
+            "value": "Microsoft.Storage/storageAccounts/fortmuappteamdiag"
         },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"

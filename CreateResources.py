@@ -29,7 +29,7 @@ os.system(f'az deployment group create --name {TemplateName} --resource-group {R
 
 # Deploying the PostgreSQL Database
 TemplateFile = 'TestEnvTemplates/TestDatabaseTemplate.json'
-ParameterFile = '@TestEnvTemplates/TestDatabaseParameter.json'
+ParameterFile = '@TestEnvTemplates/TestDatabaseParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Private Link for Database
