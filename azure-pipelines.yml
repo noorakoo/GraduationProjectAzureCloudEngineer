@@ -9,10 +9,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-# Run Python files manually
+# Run Python files, DeployResources.py when trigger is set from none to master
+# Run ResizeVM.py manually as needed
 jobs:
   - job: DeployResources
-    condition: eq(variables['Build.Reason'], 'Manual')
     steps:
       - task: PythonScript@0
         inputs:
@@ -25,10 +25,4 @@ jobs:
         inputs:
           scriptSource: 'filePath'
           scriptPath: ResizeVM.py
-  - job: CreateDashboard
-    condition: eq(variables['Build.Reason'], 'Manual')
-    steps:
-      - task: PythonScript@0
-        inputs:
-          scriptSource: 'filePath'
-          scriptPath: CreateDashboard.py
+
