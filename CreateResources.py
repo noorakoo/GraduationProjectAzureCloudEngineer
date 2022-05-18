@@ -50,8 +50,13 @@ os.system(f'az deployment group create --name {TemplateName} --resource-group {R
 # Deploying the Dashboard
 TemplateFile = 'TestEnvTemplates/TestDashboard.json'
 DashboardName = 'TestDashboard'
+os.system('az config set extension.use_dynamic_install=yes_without_prompt')
 os.system(f'az portal dashboard import --resource-group {ResourceGroup} --name {DashboardName} --input-path {TemplateFile}')
 
 # Deploying the Budget
 TemplateFile = 'TestEnvTemplates/TestBudget.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile}')
+
+
+
+
