@@ -29,6 +29,8 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 </p>
 </details>
 
+
+
 Testing Environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
