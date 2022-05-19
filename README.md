@@ -56,7 +56,7 @@ What the Landing zone includes:
 6. Budget with thresholds
 
 # Getting Started
-How to get started with your platform for building Apps:
+Get started with your Landing Zone:
 	
 Install Python
 ```bash
