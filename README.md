@@ -60,5 +60,7 @@ Deploy Landing Zone through DevOps Pipeline:
 2.	Select your environment and sign in to your Azure account when prompted by the Pipeline
 3.	Watch your environment deploy through the Pipeline
 
-Photo here of the empty web app "hello developers..."
+> You will get your empty Web App. Enjoy coding!
+
+![Alt text](/README.md_photo/WebApp.PNG "Web App")
 
