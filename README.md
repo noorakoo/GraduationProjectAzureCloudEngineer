@@ -14,7 +14,7 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 
 
 ## What the Landing zone includes:
-*Testing environment:*
+Testing environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan |
 | ------------- | ------------- | ------------- | ------------- |
 | Bastion connection  | 1 instance  | General Purpose 2 vCores  | Premium P2v2 |
@@ -24,7 +24,7 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 |  | Patch Mode: Automatic by OS |  |  |
 |  | Monitoring & Diagnostics |  |  |
 
-*Production environment:*
+Production environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan |
 | ------------- | ------------- | ------------- | ------------- |
 | Bastion connection  | 2 instances  | General Purpose 4 vCores  | Premium P2v2 |
@@ -34,7 +34,7 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 |  | Patch Mode: Automatic by OS |  |  |
 |  | Monitoring & Diagnostics |  |  |
 
-*Both environments include:*
+Both environments include:
 | Dashboard |  |
 | --- | --- |
 | Monitoring | Virtual Machine CPU and memory usage, Database CPU and reclaimable space, log-ins |
@@ -44,15 +44,15 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 Get started with your Landing Zone by running these Bash commands:
 	
 Install Python
-```
+```bash
 command
 ```
 Install json
-```
+```bash
 command
 ```
 Install os module
-```
+```bash
 command
 ```
 
@@ -62,7 +62,7 @@ Deploy Landing Zone through code editor:
 2.	Run 'Getting started' installments from the terminal
 3.	Select your environment and change the variable values accordingly
 4.	Press Run or run from terminal:
-```
+```bash
 python CreateResources.py
 ```
 
