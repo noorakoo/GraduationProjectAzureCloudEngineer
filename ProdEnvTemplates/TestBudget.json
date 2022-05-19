@@ -1,0 +1,101 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "metadata": {
+      "_generator": {
+        "name": "bicep",
+        "version": "0.5.6.12127",
+        "templateHash": "15851432186142062555"
+      }
+    },
+    "parameters": {
+      "budgetName": {
+        "type": "string",
+        "defaultValue": "MyBudget",
+        "metadata": {
+          "description": "Name of the Budget. It should be unique within a resource group."
+        }
+      },
+      "amount": {
+        "type": "int",
+        "defaultValue": 1000,
+        "metadata": {
+          "description": "The total amount of cost or usage to track with the budget"
+        }
+      },
+      "timeGrain": {
+        "type": "string",
+        "defaultValue": "Monthly",
+        "allowedValues": [
+          "Monthly",
+          "Quarterly",
+          "Annually"
+        ],
+        "metadata": {
+          "description": "The time covered by a budget. Tracking of the amount will be reset based on the time grain."
+        }
+      },
+      "startDate": {
+        "type": "string",
+        "metadata": {
+          "description": "2022-05-20"
+        }
+      },
+      "endDate": {
+        "type": "string",
+        "metadata": {
+          "description": "2022-12-31"
+        }
+      },
+      "firstThreshold": {
+        "type": "int",
+        "defaultValue": 90,
+        "metadata": {
+          "description": "Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0.01 and 1000."
+        }
+      },
+      "secondThreshold": {
+        "type": "int",
+        "defaultValue": 110,
+        "metadata": {
+          "description": "Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0.01 and 1000."
+        }
+      },
+      "contactEmails": {
+        "type": "array",
+        "metadata": {
+          "description": "noora.kataja@awacademy.training"
+        }
+      }
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Consumption/budgets",
+        "apiVersion": "2021-10-01",
+        "name": "[parameters('budgetName')]",
+        "properties": {
+          "timePeriod": {
+            "startDate": "[parameters('startDate')]",
+            "endDate": "[parameters('endDate')]"
+          },
+          "timeGrain": "[parameters('timeGrain')]",
+          "amount": "[parameters('amount')]",
+          "category": "Cost",
+          "notifications": {
+            "NotificationForExceededBudget1": {
+              "enabled": true,
+              "operator": "GreaterThan",
+              "threshold": "[parameters('firstThreshold')]",
+              "contactEmails": "[parameters('contactEmails')]"
+            },
+            "NotificationForExceededBudget2": {
+              "enabled": true,
+              "operator": "GreaterThan",
+              "threshold": "[parameters('secondThreshold')]",
+              "contactEmails": "[parameters('contactEmails')]"
+            }
+          }
+        }
+      }
+    ]
+  }
