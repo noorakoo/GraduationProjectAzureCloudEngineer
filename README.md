@@ -8,8 +8,9 @@ With this Landing Zone you will have a cloud based environment up and running in
 Run azure-pipelines.yml to deploy your Landing Zone through Pipeline
 Run CreateResources.py to deploy your Landing Zone through editor
 Run ResizeVM.py to resize a deployed Virtual Machine 
-What this Landing zone includes:
 ```
+
+What the Landing zone includes:
 ## Testing environment:
 1.	Virtual Network:
     + Bastion connection
