@@ -17,7 +17,7 @@ jobs:
       - task: PythonScript@0
         inputs:
           scriptSource: 'filePath'
-          scriptPath: CreateResources.py
+          scriptPath: CreateResourcesPipeline.py
   - job: ResizeVM
     condition: eq(variables['Build.Reason'], 'Manual')
     steps:
