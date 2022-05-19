@@ -15,6 +15,7 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 
 ## What the Landing zone includes:
 <details><summary>Testing Environment</summary>
+<p>
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Bastion connection  | 1 instance  | General Purpose 2 vCores  | Premium P2v2 | Virtual Machine CPU | Start and End dates |
@@ -23,9 +24,11 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 |  | Size: Standard_DS1_v2  |  |  | Database reclaimable space |  |
 |  | Patch Mode: Automatic by OS |  |  | Log-ins |  |
 |  | Monitoring & Diagnostics |  |  |  |  |
+</p>
 </details>
 
 <details><summary>Production Environment</summary>
+<p>
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Bastion connection  | 2 instances  | General Purpose 4 vCores  | Premium P2v2 | Virtual Machine CPU | Start and End dates |
@@ -34,6 +37,7 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 |  | Size: Standard_DS1_v2  |  |  | Database reclaimable space |  |
 |  | Patch Mode: Automatic by OS |  |  | Log-ins |  |
 |  | Monitoring & Diagnostics |  |  |  |  |
+</p>
 </details>
 
 # Getting Started
