@@ -60,7 +60,7 @@ python CreateResources.py
 2.	Select your environment and sign in to your Azure account when prompted by the Pipeline
 3.	Watch your environment deploy through the Pipeline
 
-> You will get your empty Web App. Enjoy coding!
+> Open your Web App through the Private Link, and you are ready to code and deploy your Apps!
 
 ![Alt text](/README.md_photo/WebApp.PNG "Web App")
 
