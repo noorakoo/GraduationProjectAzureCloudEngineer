@@ -34,12 +34,6 @@ Production environment:
 |  | Patch Mode: Automatic by OS |  |  | Log-ins |  |
 |  | Monitoring & Diagnostics |  |  |  |  |
 
-Both environments include:
-| Dashboard |  |
-| --- | --- |
-| Monitoring | Virtual Machine CPU and memory usage, Database CPU and reclaimable space, log-ins |
-| Budget | Start and End dates, Customizable thresholds, E-mail alert |
-
 # Getting Started
 Get started with your Landing Zone by running these Bash commands:
 	
