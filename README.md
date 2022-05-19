@@ -35,7 +35,7 @@ Production Environment:
 |  | Monitoring & Diagnostics |  |  |  |  |
 
 # Getting Started
-Get started with your Landing Zone by running these Bash commands:
+Get started with your Landing Zone by running these Bash commands on your code editor:
 	
 Install Python
 ```bash
