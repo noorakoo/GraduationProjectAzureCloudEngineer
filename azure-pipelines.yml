@@ -17,12 +17,12 @@ jobs:
       - task: PythonScript@0
         inputs:
           scriptSource: 'filePath'
-          scriptPath: CreateResources.py
-  - job: ResizeVM
-    condition: eq(variables['Build.Reason'], 'Manual')
-    steps:
-      - task: PythonScript@0
-        inputs:
-          scriptSource: 'filePath'
-          scriptPath: ResizeVM.py
+          scriptPath: CreateResourcesPipeline.py
+  # - job: ResizeVM
+  #   condition: eq(variables['Build.Reason'], 'Manual')
+  #   steps:
+  #     - task: PythonScript@0
+  #       inputs:
+  #         scriptSource: 'filePath'
+  #         scriptPath: ResizeVM.py
 
