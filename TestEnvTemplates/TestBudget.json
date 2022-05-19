@@ -64,9 +64,10 @@
         }
       },
       "contactEmails": {
-        "type": "array",
+        "type": "string",
+        "defaultValue": "noora.kataja@awacademy.training",
         "metadata": {
-          "description": "noora.kataja@awacademy.training"
+          "description": "E-mails."
         }
       }
     },

@@ -37,12 +37,14 @@
       },
       "startDate": {
         "type": "string",
+        "defaultValue": "2022-05-20",
         "metadata": {
           "description": "2022-05-20"
         }
       },
       "endDate": {
         "type": "string",
+        "defaultValue": "2022-12-31",
         "metadata": {
           "description": "2022-12-31"
         }
@@ -62,9 +64,10 @@
         }
       },
       "contactEmails": {
-        "type": "array",
+        "type": "string",
+        "defaultValue": "noora.kataja@awacademy.training",
         "metadata": {
-          "description": "noora.kataja@awacademy.training"
+          "description": "E-mails."
         }
       }
     },
