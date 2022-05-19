@@ -16,7 +16,7 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 
 
 ## What the Landing zone includes:
-Testing Environment:
+> Testing Environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Bastion connection  | 1 instance  | General Purpose 2 vCores  | Premium P2v2 | Virtual Machine CPU | Start and End dates |
@@ -26,7 +26,7 @@ Testing Environment:
 |  | Patch Mode: Automatic by OS |  |  | Log-ins |  |
 |  | Monitoring & Diagnostics |  |  |  |  |
 
-Production Environment:
+> Production Environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Bastion connection  | 2 instances  | General Purpose 4 vCores  | Premium P2v2 | Virtual Machine CPU | Start and End dates |
@@ -46,7 +46,7 @@ sudo apt install python3.10
 ```
 
 # Build your Landing Zone
-Deploy Landing Zone through code editor:
+> Deploy Landing Zone through code editor:
 1.	Clone the repository to your code editor
 2.	Run 'Getting started' installment in the terminal
 3.	Press Run or run in Bash terminal:
@@ -55,7 +55,7 @@ python CreateResources.py
 ```
 4.	Select your environment and sign in to your Azure account as prompted by the terminal
 
-Deploy Landing Zone through DevOps Pipeline:
+> Deploy Landing Zone through DevOps Pipeline:
 1.	Press 'Set up build' from repository
 2.	Select your environment and sign in to your Azure account when prompted by the Pipeline
 3.	Watch your environment deploy through the Pipeline
