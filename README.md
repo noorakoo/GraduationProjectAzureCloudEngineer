@@ -34,10 +34,14 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 |  | Patch Mode: Automatic by OS |  |  |
 |  | Monitoring & Diagnostics |  |  |
 
-5. Monitoring Dashboard
-    + Virtual Machine CPU and Memory usage by percentage, log-ins
-    + Database CPU and reclaimable space
-6. Budget with thresholds
+**Both environments include:**
+| Monitoring Dashboard | Budget|
+| ------------- | ------------- |
+| Virtual Machine CPU  | Start and End dates  |
+| Virtual Machine memory usage  | Customizable thresholds  |
+| Log-ins  | E-mail alert  |
+| Database CPU  |   |
+| Database reclaimable space |  |
 
 # Getting Started
 Get started with your Landing Zone by running these Bash commands:
