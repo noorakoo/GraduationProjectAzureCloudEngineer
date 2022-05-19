@@ -38,7 +38,6 @@ Production Environment:
 
 # Getting Started
 Get started with your Landing Zone by running this Bash command on your terminal to install Python. 
-
 The libraries we will be using (json and os) come preinstalled:
 	
 Install Python
