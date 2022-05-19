@@ -60,7 +60,7 @@ What the Landing zone includes:
 # Getting Started
 Get started with your Landing Zone by running these Bash commands:
 	
-- [ ] Install Python
+- [x] Install Python
 ```
 command
 ```
