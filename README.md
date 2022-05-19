@@ -14,27 +14,6 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 
 
 ## What the Landing zone includes:
-<details><summary>Testing Environment</summary>
-<p>
-    ```
-        Details
-    ```
-    ```
-        Details
-    ```
-</p>
-</details>
-<details><summary>Production Environment</summary>
-<p>
-    ```
-        Details
-    ```
-    ```
-        Details
-    ```
-</p>
-</details>
-
 Testing Environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
