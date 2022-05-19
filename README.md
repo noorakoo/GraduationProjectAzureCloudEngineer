@@ -53,7 +53,6 @@ What this Landing zone includes:
 
 # Getting Started
 How to get started with your platform for building Apps:
-1.	Install
 Install Python
 ```bash
 command
