@@ -73,13 +73,13 @@
                     "resources": [
                         {
                             "name": "FortmuTestVnet/FortmuTestSubnet",
-                            "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet/subnets/FortmuTestSubnet",
+                            "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet/subnets/FortmuTestSubnet",
                             "properties": {
                                 "provisioningState": "Succeeded",
                                 "addressPrefix": "10.6.0.0/24",
                                 "ipConfigurations": [
                                     {
-                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/networkInterfaces/fortmutestvm624/ipConfigurations/ipconfig1"
+                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/networkInterfaces/fortmutestvm624/ipConfigurations/ipconfig1"
                                     }
                                 ],
                                 "delegations": [],
@@ -111,7 +111,7 @@
                             "name": "PrivateDnsZone-75704a90-a1f8-4592-b463-0cde2fe27067",
                             "type": "Microsoft.Resources/deployments",
                             "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
-                            "resourceGroup": "FortmuAppTeam",
+                            "resourceGroup": "FortmuAppTeamTest",
                             "properties": {
                                 "mode": "Incremental",
                                 "template": {
@@ -154,7 +154,7 @@
                             "name": "VirtualNetworklink-75704a90-a1f8-4592-b463-0cde2fe27068",
                             "type": "Microsoft.Resources/deployments",
                             "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
-                            "resourceGroup": "FortmuAppTeam",
+                            "resourceGroup": "FortmuAppTeamTest",
                             "properties": {
                                 "mode": "Incremental",
                                 "template": {
@@ -185,7 +185,7 @@
             "apiVersion": "2017-05-10",
             "name": "DnsZoneGroup-20220517134733",
             "type": "Microsoft.Resources/deployments",
-            "resourceGroup": "FortmuAppTeam",
+            "resourceGroup": "FortmuAppTeamTest",
             "dependsOn": [
                 "[parameters('privateEndpointName')]",
                 "[parameters('privateDnsDeploymentName')]"
@@ -206,7 +206,7 @@
                                     {
                                         "name": "privatelink-postgres-database-azure-com",
                                         "properties": {
-                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/privateDnsZones/privatelink.postgres.database.azure.com"
+                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/privateDnsZones/privatelink.postgres.database.azure.com"
                                         }
                                     }
                                 ]
@@ -218,3 +218,5 @@
         }
     ]
 }
+
+

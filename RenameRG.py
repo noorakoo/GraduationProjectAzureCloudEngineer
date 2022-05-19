@@ -1,10 +1,10 @@
 import json
 import os
 
-#RGName = ""
-#NewRGName = ""
+RGName = "FortmuAppTeamTestTest"
+NewRGName = "FortmuAppTeamTest"
 
-for directory in ['./ProdEnvTemplates', './TestEnvTemplates']:
+for directory in ['./TestEnvTemplates']:
     # Iterating over files in the directory
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
@@ -25,6 +25,6 @@ for directory in ['./ProdEnvTemplates', './TestEnvTemplates']:
                     updated_lines.append(line)
                     
             # Writing to new json
-            with open(directory + "/Updated"+filename, "w") as outfile:
+            with open(directory + "/"+filename, "w") as outfile:
                 for line in updated_lines:
                     outfile.write(line + "\n")

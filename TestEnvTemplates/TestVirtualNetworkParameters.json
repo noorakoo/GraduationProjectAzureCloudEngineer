@@ -12,7 +12,7 @@
             "value": "FortmuTestVnet"
         },
         "resourceGroup": {
-            "value": "FortmuAppTeam"
+            "value": "FortmuAppTeamTest"
         },
         "addressSpaces": {
             "value": [
@@ -51,3 +51,5 @@
         }
     }
 }
+
+

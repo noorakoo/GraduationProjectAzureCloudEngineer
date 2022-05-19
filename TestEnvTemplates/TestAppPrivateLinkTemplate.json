@@ -76,7 +76,7 @@
                             "name": "PrivateDnsZone-75704a90-a1f8-4592-b463-0cde2fe270b5",
                             "type": "Microsoft.Resources/deployments",
                             "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
-                            "resourceGroup": "FortmuAppTeam",
+                            "resourceGroup": "FortmuAppTeamTest",
                             "properties": {
                                 "mode": "Incremental",
                                 "template": {
@@ -119,7 +119,7 @@
                             "name": "VirtualNetworklink-75704a90-a1f8-4592-b463-0cde2fe270b6",
                             "type": "Microsoft.Resources/deployments",
                             "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
-                            "resourceGroup": "FortmuAppTeam",
+                            "resourceGroup": "FortmuAppTeamTest",
                             "properties": {
                                 "mode": "Incremental",
                                 "template": {
@@ -150,7 +150,7 @@
             "apiVersion": "2017-05-10",
             "name": "DnsZoneGroup-20220517135439",
             "type": "Microsoft.Resources/deployments",
-            "resourceGroup": "FortmuAppTeam",
+            "resourceGroup": "FortmuAppTeamTest",
             "dependsOn": [
                 "[parameters('privateEndpointName')]",
                 "[parameters('privateDnsDeploymentName')]"
@@ -171,7 +171,7 @@
                                     {
                                         "name": "privatelink-azurewebsites-net",
                                         "properties": {
-                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net"
+                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net"
                                         }
                                     }
                                 ]
@@ -183,3 +183,5 @@
         }
     ]
 }
+
+

@@ -37,12 +37,14 @@
       },
       "startDate": {
         "type": "string",
+        "defaultValue": "2022-05-20",
         "metadata": {
           "description": "2022-05-20"
         }
       },
       "endDate": {
         "type": "string",
+        "defaultValue": "2022-12-31",
         "metadata": {
           "description": "2022-12-31"
         }
@@ -99,3 +101,5 @@
       }
     ]
   }
+
+

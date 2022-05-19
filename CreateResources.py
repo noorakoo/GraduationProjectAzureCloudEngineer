@@ -30,9 +30,9 @@ if ToDeploy == "1" or ToDeploy == "3":
     os.system(f'az account set --subscription {SubscriptionId}')
 
     # Creating the environment / Resource Group and Template
-    ResourceGroup = 'FortmuAppTeam'
+    ResourceGroup = 'FortmuAppTeamTest'
     Location = 'northeurope'
-    TemplateName = 'FortmuTemp'
+    TemplateName = 'FortmuTempTest'
     os.system(f'az group create --name {ResourceGroup} --location {Location}')
 
     # Deploying the Virtual Network

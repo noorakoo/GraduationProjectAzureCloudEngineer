@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "rgName": {
-            "value": "FortmuAppTeam"
+            "value": "FortmuAppTeamTest"
         },
         "rgLocation": {
             "value": "northeurope"
@@ -15,3 +15,5 @@
         }
     }
 }
+
+
