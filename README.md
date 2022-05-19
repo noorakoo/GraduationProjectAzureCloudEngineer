@@ -60,15 +60,15 @@ What the Landing zone includes:
 # Getting Started
 Get started with your Landing Zone by running these Bash commands:
 	
-- [x] Install Python
+Install Python
 ```
 command
 ```
-- [ ] Install json
+Install json
 ```
 command
 ```
-- [ ] Install os module
+Install os module
 ```
 command
 ```
