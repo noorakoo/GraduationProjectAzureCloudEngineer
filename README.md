@@ -4,12 +4,12 @@
 Landing Zone for Fortmu Ltd Application Development & Production Team.
 
 With this Landing Zone you will have a cloud based environment up and running in just a couple of clicks to build your Web Apps. Customize the platform to suit your needs through parameter files when needed.
-´´´
+```bash
 Run azure-pipelines.yml to deploy your Landing Zone through Pipeline
 Run CreateResources.py to deploy your Landing Zone through editor
 Run ResizeVM.py to resize a deployed Virtual Machine 
 What this Landing zone includes:
-´´´
+```
 ## Testing environment:
 1.	Virtual Network:
     + Bastion connection
