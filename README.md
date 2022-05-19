@@ -62,7 +62,7 @@ Deploy Landing Zone through code editor:
 2.	Run 'Getting started' installments from the terminal
 3.	Select your environment and change the variable values accordingly
 4.	Press Run or run from terminal:
-```bash
+```python
 python CreateResources.py
 ```
 
