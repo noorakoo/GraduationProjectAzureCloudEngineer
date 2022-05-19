@@ -29,9 +29,9 @@ What the Landing zone includes:
     + Windows .NET Core 3.1 (LTS)
     + Private Link connection
 5. Monitoring Dashboard
-    + CPU and Memory usage by percentage to Virtual Machine
-    + xxxx to Database
-6. Budget with thresholds
+    + Virtual Machine CPU and Memory usage by percentage, log-ins
+    + Database CPU and reclaimable space
+6. Budget with thresholds and e-mail
 
 ## Production environment:
 1.	Virtual Network:
@@ -51,8 +51,8 @@ What the Landing zone includes:
     + Windows .NET Core 3.1 (LTS)
     + Private Link connection
 5. Monitoring Dashboard
-    + Virtual Machine CPU and Memory usage by percentage
-    + Database
+    + Virtual Machine CPU and Memory usage by percentage, log-ins
+    + Database CPU and reclaimable space
 6. Budget with thresholds
 
 # Getting Started
@@ -62,7 +62,7 @@ Install Python
 ```
 command
 ```
-Install Flask
+Install json
 ```
 command
 ```
@@ -76,7 +76,10 @@ Deploy Landing Zone through editor:
 1.	Clone the repository to your text editor
 2.	Run installments from the terminal
 3.	Select your environment and change the variable values accordingly
-4.	Press Run 
+4.	Press Run or run from terminal:
+```
+python CreateResources.py
+```
 
 Deploy Landing Zone through pipeline:
 1.	Press 'Set up build' from respository
