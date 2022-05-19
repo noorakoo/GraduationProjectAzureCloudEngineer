@@ -39,15 +39,7 @@ Get started with your Landing Zone by running these Bash commands on your code e
 	
 Install Python
 ```bash
-command
-```
-Install json
-```bash
-command
-```
-Install os module
-```bash
-command
+sudo apt install python3.10
 ```
 
 # Build your Landing Zone
