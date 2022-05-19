@@ -35,13 +35,10 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 |  | Monitoring & Diagnostics |  |  |
 
 **Both environments include:**
-| Monitoring Dashboard | Budget|
-| ------------- | ------------- |
-| Virtual Machine CPU  | Start and End dates  |
-| Virtual Machine memory usage  | Customizable thresholds  |
-| Log-ins  | E-mail alert  |
-| Database CPU  |   |
-| Database reclaimable space |  |
+| Dashboard |  |
+| --- | --- |
+| Monitoring | Virtual Machine CPU and memory usage, Database CPU and reclaimable space, log-ins |
+| Budget | Start and End dates, Customizable thresholds, E-mail alert |
 
 # Getting Started
 Get started with your Landing Zone by running these Bash commands:
