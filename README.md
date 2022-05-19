@@ -85,5 +85,3 @@ Deploy Landing Zone through pipeline:
 
 Photo here of the empty web app "hello developers..."
 
-## Contributing
-Pull requests are welcome.
