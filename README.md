@@ -17,20 +17,20 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 <details><summary>Testing Environment</summary>
 <p>
     ```
-      Details
+        Details
     ```
     ```
-      Details
+        Details
     ```
 </p>
 </details>
 <details><summary>Production Environment</summary>
 <p>
     ```
-      Details
+        Details
     ```
     ```
-      Details
+        Details
     ```
 </p>
 </details>
