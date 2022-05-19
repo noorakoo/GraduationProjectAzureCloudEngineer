@@ -54,11 +54,11 @@ command
 Deploy Landing Zone through code editor:
 1.	Clone the repository to your code editor
 2.	Run 'Getting started' installments from the terminal
-3.	Select your environment and change the variable values accordingly
-4.	Press Run or run from terminal:
+3.	Press Run or run from terminal:
 ```bash
 python CreateResources.py
 ```
+4.	Select your environment as prompted by the terminal
 
 Deploy Landing Zone through pipeline:
 1.	Press 'Set up build' from respository
