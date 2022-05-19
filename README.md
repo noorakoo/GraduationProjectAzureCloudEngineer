@@ -27,6 +27,13 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 </p>
 </details>
 
+Production Environment:
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+
 <details><summary>Production Environment</summary>
 <p>
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
@@ -44,8 +51,8 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 | --- | --- |
 | Virtual Network | Bastion connection |
 | Windows Virtual Machine | 2 instances, Open to port HTTPS 443, OS Disk Type: Premium_LRS, Size: Standard_DS1_v2, Patch Mode: Automatic by OS |
-| PostgreSQL Database | List all new or modified files |
-| Web App & App Service Plan | Show file differences that haven't been staged |
+| PostgreSQL Database | General Purpose 4 vCores, Version 11, Private Link connection |
+| Web App & App Service Plan | Premium P2v2, Windows .NET Core 3.1 (LTS) |
 | Monitoring Dashboard | List all new or modified files |
 | Budget | Show file differences that haven't been staged |
 
