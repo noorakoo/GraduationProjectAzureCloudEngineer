@@ -14,6 +14,38 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 
 
 ## What the Landing zone includes:
+Testing Environment:
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+
 <details><summary>Testing Environment</summary>
 <p>
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
@@ -28,6 +60,31 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 </details>
 
 Production Environment:
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
+<details><summary>Virtual Network</summary>
+<p>
+- Bastion connection
+</p>
+</details>
 <details><summary>Virtual Network</summary>
 <p>
 - Bastion connection
