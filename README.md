@@ -9,6 +9,8 @@ Run azure-pipelines.yml to deploy your Landing Zone through Pipeline
 
 Run CreateResources.py to deploy your Landing Zone through code editor
 
+Run RenameRG.py to rename your resource group
+
 Run ResizeVM.py to resize a deployed Virtual Machine 
 ```
 
