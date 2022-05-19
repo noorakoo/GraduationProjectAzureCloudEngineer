@@ -16,23 +16,29 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 ## What the Landing zone includes:
 Testing environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Bastion connection  | 1 instance  | General Purpose 2 vCores  | Premium P2v2 | Virtual Machine CPU |
-|  | Open to port HTTPS 443 | Version 11  | Windows .NET Core 3.1 (LTS) | Virtual Machine memory usage |
-|  | OS Disk Type: StandardSSD_LRS | Private Link connection   | Private Link connection | Database CPU |
-|  | Size: Standard_DS1_v2  |  |  | Database reclaimable space |
-|  | Patch Mode: Automatic by OS |  |  | Log-ins |
-|  | Monitoring & Diagnostics |  |  |  |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Bastion connection  | 1 instance  | General Purpose 2 vCores  | Premium P2v2 | Virtual Machine CPU | Start and End dates |
+|  | Open to port HTTPS 443 | Version 11  | Windows .NET Core 3.1 (LTS) | Virtual Machine memory usage | Customizable thresholds |
+|  | OS Disk Type: StandardSSD_LRS | Private Link connection   | Private Link connection | Database CPU | E-mail alert |
+|  | Size: Standard_DS1_v2  |  |  | Database reclaimable space |  |
+|  | Patch Mode: Automatic by OS |  |  | Log-ins |  |
+|  | Monitoring & Diagnostics |  |  |  |  |
 
 Production environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan | Monitoring Dashboard | Budget |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Bastion connection  | 2 instances  | General Purpose 4 vCores  | Premium P2v2 | Virtual Machine CPU |
-|  | Open to port HTTPS 443 | Version 11  | Windows .NET Core 3.1 (LTS) | Virtual Machine memory usage |
-|  | OS Disk Type: Premium_LRS | Private Link connection   | Private Link connection | Database CPU |
-|  | Size: Standard_DS1_v2  |  |  | Database reclaimable space |
-|  | Patch Mode: Automatic by OS |  |  | Log-ins |
-|  | Monitoring & Diagnostics |  |  |  |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Bastion connection  | 2 instances  | General Purpose 4 vCores  | Premium P2v2 | Virtual Machine CPU | Start and End dates |
+|  | Open to port HTTPS 443 | Version 11  | Windows .NET Core 3.1 (LTS) | Virtual Machine memory usage | Customizable thresholds |
+|  | OS Disk Type: Premium_LRS | Private Link connection   | Private Link connection | Database CPU | E-mail alert |
+|  | Size: Standard_DS1_v2  |  |  | Database reclaimable space |  |
+|  | Patch Mode: Automatic by OS |  |  | Log-ins |  |
+|  | Monitoring & Diagnostics |  |  |  |  |
+
+Both environments include:
+| Dashboard |  |
+| --- | --- |
+| Monitoring | Virtual Machine CPU and memory usage, Database CPU and reclaimable space, log-ins |
+| Budget | Start and End dates, Customizable thresholds, E-mail alert |
 
 # Getting Started
 Get started with your Landing Zone by running these Bash commands:
