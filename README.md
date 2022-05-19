@@ -84,3 +84,6 @@ Deploy Landing Zone through pipeline:
 3.	Watch your environment deploy through the Pipeline
 
 Photo here of the empty web app "hello developers..."
+
+## Contributing
+Pull requests are welcome.
