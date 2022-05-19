@@ -72,17 +72,17 @@
                     "contentVersion": "1.0.0.0",
                     "resources": [
                         {
-                            "name": "FortmuProdVnet/FortmuProdSubnet",
-                            "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Network/virtualNetworks/FortmuProdVnet/subnets/FortmuProdSubnet",
+                            "name": "FortmuAppTeam/FortmuProdSubnet",
+                            "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/virtualNetworks/FortmuAppTeam/subnets/FortmuProdSubnet",
                             "properties": {
                                 "provisioningState": "Succeeded",
                                 "addressPrefix": "10.7.0.0/24",
                                 "ipConfigurations": [
                                     {
-                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Network/networkInterfaces/fortmuprodvm2393/ipConfigurations/ipconfig1"
+                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/networkInterfaces/fortmuprodvm2393/ipConfigurations/ipconfig1"
                                     },
                                     {
-                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Network/networkInterfaces/fortmuprodvm1834_z2/ipConfigurations/ipconfig1"
+                                        "id": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/networkInterfaces/fortmuprodvm1834_z2/ipConfigurations/ipconfig1"
                                     }
                                 ],
                                 "delegations": [],
@@ -114,7 +114,7 @@
                             "name": "PrivateDnsZone-75704a90-a1f8-4592-b463-0cde2fe27137",
                             "type": "Microsoft.Resources/deployments",
                             "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
-                            "resourceGroup": "FortmuDemoProd",
+                            "resourceGroup": "FortmuAppTeam",
                             "properties": {
                                 "mode": "Incremental",
                                 "template": {
@@ -157,7 +157,7 @@
                             "name": "VirtualNetworklink-75704a90-a1f8-4592-b463-0cde2fe27138",
                             "type": "Microsoft.Resources/deployments",
                             "subscriptionId": "07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c",
-                            "resourceGroup": "FortmuDemoProd",
+                            "resourceGroup": "FortmuAppTeam",
                             "properties": {
                                 "mode": "Incremental",
                                 "template": {
@@ -188,7 +188,7 @@
             "apiVersion": "2017-05-10",
             "name": "DnsZoneGroup-20220517144214",
             "type": "Microsoft.Resources/deployments",
-            "resourceGroup": "FortmuDemoProd",
+            "resourceGroup": "FortmuAppTeam",
             "dependsOn": [
                 "[parameters('privateEndpointName')]",
                 "[parameters('privateDnsDeploymentName')]"
@@ -209,7 +209,7 @@
                                     {
                                         "name": "privatelink-postgres-database-azure-com",
                                         "properties": {
-                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuDemoProd/providers/Microsoft.Network/privateDnsZones/privatelink.postgres.database.azure.com"
+                                            "privateDnsZoneId": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeam/providers/Microsoft.Network/privateDnsZones/privatelink.postgres.database.azure.com"
                                         }
                                     }
                                 ]

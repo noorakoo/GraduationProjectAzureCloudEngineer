@@ -12,7 +12,7 @@
             "value": "FortmuProdVnet"
         },
         "resourceGroup": {
-            "value": "FortmuDemoProd"
+            "value": "FortmuAppTeam"
         },
         "addressSpaces": {
             "value": [

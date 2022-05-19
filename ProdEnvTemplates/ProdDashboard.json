@@ -72,7 +72,7 @@
                         "metrics": [
                           {
                             "resourceMetadata": {
-                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuAppTeam/providers/Microsoft.Compute/virtualMachines/FortmuVM"
                             },
                             "name": "Available Memory Bytes",
                             "aggregationType": 4,
@@ -136,7 +136,7 @@
                         "metrics": [
                           {
                             "resourceMetadata": {
-                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuAppTeam/providers/Microsoft.Compute/virtualMachines/FortmuVM"
                             },
                             "name": "CPU Credits Consumed",
                             "aggregationType": 4,
@@ -230,7 +230,7 @@
                         "metrics": [
                           {
                             "resourceMetadata": {
-                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuAppTeam/providers/Microsoft.Compute/virtualMachines/FortmuVM"
                             },
                             "name": "Percentage CPU",
                             "aggregationType": 4,
@@ -294,7 +294,7 @@
                         "metrics": [
                           {
                             "resourceMetadata": {
-                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuAppTeam/providers/Microsoft.Compute/virtualMachines/FortmuVM"
                             },
                             "name": "Inbound Flows",
                             "aggregationType": 4,
@@ -400,7 +400,7 @@
                         "metrics": [
                           {
                             "resourceMetadata": {
-                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.Compute/virtualMachines/FortmuVM"
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuAppTeam/providers/Microsoft.Compute/virtualMachines/FortmuVM"
                             },
                             "name": "CPU Credits Remaining",
                             "aggregationType": 4,
@@ -464,7 +464,7 @@
                         "metrics": [
                           {
                             "resourceMetadata": {
-                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuDev/providers/Microsoft.DBforPostgreSQL/servers/fortmudbserver"
+                              "id": "/subscriptions/e4305bfa-9413-4c0e-8527-8f5307a80a27/resourceGroups/FortmuAppTeam/providers/Microsoft.DBforPostgreSQL/servers/fortmudbserver"
                             },
                             "name": "storage_used",
                             "aggregationType": 4,
