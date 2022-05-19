@@ -36,7 +36,7 @@ Production Environment:
 
 # Getting Started
 Get started with your Landing Zone by running this Bash command on your terminal to install Python. 
-The libraries we will be using (json and os) come preinstalled through this:
+The libraries we will be using (json and os) come preinstalled:
 	
 Install Python
 ```bash
@@ -46,16 +46,16 @@ sudo apt install python3.10
 # Build your Landing Zone
 Deploy Landing Zone through code editor:
 1.	Clone the repository to your code editor
-2.	Run 'Getting started' installments from the terminal
-3.	Press Run or run from terminal:
+2.	Run 'Getting started' installment in the terminal
+3.	Press Run or run in Bash terminal:
 ```bash
 python CreateResources.py
 ```
-4.	Select your environment as prompted by the terminal
+4.	Select your environment and sign in to your Azure account as prompted by the terminal
 
-Deploy Landing Zone through pipeline:
-1.	Press 'Set up build' from respository
-2.	Sign in to your Azure account when prompted by the Pipeline
+Deploy Landing Zone through DevOps Pipeline:
+1.	Press 'Set up build' from repository
+2.	Select your environment and sign in to your Azure account when prompted by the Pipeline
 3.	Watch your environment deploy through the Pipeline
 
 Photo here of the empty web app "hello developers..."
