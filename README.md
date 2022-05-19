@@ -16,51 +16,23 @@ What the Landing zone includes:
 ## Testing environment:
 | Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan |
 | ------------- | ------------- | ------------- | ------------- |
-| Bastion connection  | 1 instance  | Content Cell  | Content Cell  |
-| Content Cell  | Open to port HTTPS 443 | Content Cell  | Content Cell  |
-| Content Cell  | OS Disk Type: StandardSSD_LRS | Content Cell  | Content Cell  |
-| Content Cell  | Size: Standard_DS1_v2  | Content Cell  | Content Cell  |
-| Content Cell  | Patch Mode: Automatic by OS | Content Cell  | Content Cell  |
-| Content Cell  | Monitoring & Diagnostics | Content Cell  | Content Cell  |
-
-1.	Virtual Network:
-    + Bastion connection
-2.	1 instance Windows Virtual Machine
-    + Open to port HTTPS 443
-    + OS Disk Type: StandardSSD_LRS
-    + Size: Standard_DS1_v2
-    + Patch Mode: Automatic by OS
-    + Monitoring & Diagnostics
-3.	PostgreSQL Database
-    + General Purpose 2 vCores
-    + Version 11
-    + Private Link connection 
-4.	Web App & App Service Plan
-    + Premium P2v2
-    + Windows .NET Core 3.1 (LTS)
-    + Private Link connection
-5. Monitoring Dashboard
-    + Virtual Machine CPU and Memory usage by percentage, log-ins
-    + Database CPU and reclaimable space
-6. Budget with thresholds and e-mail
+| Bastion connection  | 1 instance  | General Purpose 2 vCores  | Premium P2v2 |
+|  | Open to port HTTPS 443 | Version 11  | Windows .NET Core 3.1 (LTS) |
+|  | OS Disk Type: StandardSSD_LRS | Private Link connection   | Private Link connection |
+|  | Size: Standard_DS1_v2  |  |  |
+|  | Patch Mode: Automatic by OS |  |  |
+|  | Monitoring & Diagnostics |  |  |
 
 ## Production environment:
-1.	Virtual Network:
-    + Bastion connection
-2.	2 instances Windows Virtual Machine
-    + Open to port HTTPS 443
-    + OS Disk Type: Premium_LRS
-    + Size: Standard_DS1_v2
-    + Patch Mode: Automatic by OS
-    + Monitoring & Diagnostics
-3.	PostgreSQL Database
-    + General Purpose 4 vCores
-    + Version 11
-    + Private Link connection 
-4.	Web App & App Service Plan
-    + Premium P2v2
-    + Windows .NET Core 3.1 (LTS)
-    + Private Link connection
+| Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan |
+| ------------- | ------------- | ------------- | ------------- |
+| Bastion connection  | 2 instances  | General Purpose 4 vCores  | Premium P2v2 |
+|  | Open to port HTTPS 443 | Version 11  | Windows .NET Core 3.1 (LTS) |
+|  | OS Disk Type: Premium_LRS | Private Link connection   | Private Link connection |
+|  | Size: Standard_DS1_v2  |  |  |
+|  | Patch Mode: Automatic by OS |  |  |
+|  | Monitoring & Diagnostics |  |  |
+
 5. Monitoring Dashboard
     + Virtual Machine CPU and Memory usage by percentage, log-ins
     + Database CPU and reclaimable space
