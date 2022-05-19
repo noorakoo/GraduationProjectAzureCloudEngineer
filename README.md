@@ -14,6 +14,15 @@ Run ResizeVM.py to resize a deployed Virtual Machine
 
 What the Landing zone includes:
 ## Testing environment:
+| Virtual Network | Windows Virtual Machine | PostgreSQL Database  | Web App & App Service Plan |
+| ------------- | ------------- | ------------- | ------------- |
+| Bastion connection  | 1 instance  | Content Cell  | Content Cell  |
+| Content Cell  | Open to port HTTPS 443 | Content Cell  | Content Cell  |
+| Content Cell  | OS Disk Type: StandardSSD_LRS | Content Cell  | Content Cell  |
+| Content Cell  | Size: Standard_DS1_v2  | Content Cell  | Content Cell  |
+| Content Cell  | Patch Mode: Automatic by OS | Content Cell  | Content Cell  |
+| Content Cell  | Monitoring & Diagnostics | Content Cell  | Content Cell  |
+
 1.	Virtual Network:
     + Bastion connection
 2.	1 instance Windows Virtual Machine
