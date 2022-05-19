@@ -5,6 +5,10 @@ Landing Zone for Fortmu Ltd Application Development & Production Team.
 
 With this Landing Zone you will have a cloud based environment up and running in just a couple of clicks to build your Web Apps. You can customize the platform to suit your needs through parameter files or use it as it is.
 
+Run azure-pipelines.yml to deploy your Landing Zone through Pipeline
+Run CreateResources.py to deploy your Landing Zone through editor
+Run ResizeVM.py to resize a deployed Virtual Machine 
+
 What this Landing zone includes:
 
 ## Testing environment:
@@ -53,6 +57,7 @@ What this Landing zone includes:
 
 # Getting Started
 How to get started with your platform for building Apps:
+	
 Install Python
 ```bash
 command
@@ -65,10 +70,6 @@ Install os module
 ```bash
 command
 ```
-1.	Script files
-azure-pipelines.yml --> run deployment through pipelines
-DeployResources.py --> change variable values as needed to run different environments
-ResizeVM.py --> resize a deployed Virtual Machine
 
 # Build your Landing Zone
 Deploy Landing Zone through editor:
