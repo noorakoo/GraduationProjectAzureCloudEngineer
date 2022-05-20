@@ -15,7 +15,7 @@
             "value": "FortmuProdAppPlan"
         },
         "serverFarmResourceGroup": {
-            "value": "FortmuAppTeam"
+            "value": "FortmuProd"
         },
         "alwaysOn": {
             "value": true
@@ -46,3 +46,5 @@
         }
     }
 }
+
+

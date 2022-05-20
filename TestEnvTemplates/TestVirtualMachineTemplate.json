@@ -264,7 +264,7 @@
         },
         {
             "apiVersion": "2017-05-10",
-            "name": "BackupVaultAndOrPolicy-FortmuAppTeamTestRecoveryVault-EnhancedPoli",
+            "name": "BackupVaultAndOrPolicy-FortmuTestRecoveryVault-EnhancedPoli",
             "type": "Microsoft.Resources/deployments",
             "resourceGroup": "[parameters('backupVaultRGName')]",
             "properties": {
@@ -336,7 +336,7 @@
             },
             "dependsOn": [
                 "[resourceId(parameters('virtualMachineRG'), 'Microsoft.Compute/virtualMachines', parameters('virtualMachineName'))]",
-                "[concat('Microsoft.Resources/deployments', '/', 'BackupVaultAndOrPolicy-FortmuAppTeamTestRecoveryVault-EnhancedPoli')]"
+                "[concat('Microsoft.Resources/deployments', '/', 'BackupVaultAndOrPolicy-FortmuTestRecoveryVault-EnhancedPoli')]"
             ]
         },
         {
@@ -641,5 +641,8 @@
         }
     }
 }
+
+
+
 
 

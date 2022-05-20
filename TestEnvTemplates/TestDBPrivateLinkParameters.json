@@ -9,7 +9,7 @@
             "value": "TestPrivateLinkDatabase"
         },
         "privateLinkResource": {
-            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.DBforPostgreSQL/servers/fortmutestdb"
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuTest/providers/Microsoft.DBforPostgreSQL/servers/fortmutestdb"
         },
         "targetSubResource": {
             "value": [
@@ -20,21 +20,24 @@
             "value": ""
         },
         "subnet": {
-            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet/subnets/FortmuTestSubnet"
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet/subnets/FortmuTestSubnet"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet"
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet"
         },
         "subnetDeploymentName": {
             "value": "UpdateSubnetDeployment-20220517134733"
         },
         "virtualNetworkResourceGroup": {
-            "value": "FortmuAppTeamTest"
+            "value": "FortmuTest"
         },
         "privateDnsDeploymentName": {
             "value": "PrivateDns-20220517134733"
         }
     }
 }
+
+
+
 
 

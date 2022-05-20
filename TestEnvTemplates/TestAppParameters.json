@@ -15,7 +15,7 @@
             "value": "FortmuTestAppPlan"
         },
         "serverFarmResourceGroup": {
-            "value": "FortmuAppTeamTest"
+            "value": "FortmuTest"
         },
         "alwaysOn": {
             "value": true
@@ -46,5 +46,8 @@
         }
     }
 }
+
+
+
 
 

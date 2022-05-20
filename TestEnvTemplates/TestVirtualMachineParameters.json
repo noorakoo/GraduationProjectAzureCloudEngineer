@@ -35,7 +35,7 @@
             "value": "FortmuTestSubnet"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuAppTeamTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet"
+            "value": "/subscriptions/07c29cd9-f0b0-42f7-be1c-01d2cfc5ee2c/resourceGroups/FortmuTest/providers/Microsoft.Network/virtualNetworks/FortmuTestVnet"
         },
         "publicIpAddressName": {
             "value": "FortmuTestVM-ip"
@@ -56,7 +56,7 @@
             "value": "FortmuTestVM"
         },
         "virtualMachineRG": {
-            "value": "FortmuAppTeamTest"
+            "value": "FortmuTest"
         },
         "osDiskType": {
             "value": "StandardSSD_LRS"
@@ -83,10 +83,10 @@
             "value": false
         },
         "diagnosticsStorageAccountName": {
-            "value": "fortmuappteamtestdiag"
+            "value": "fortmutestdiag"
         },
         "diagnosticsStorageAccountId": {
-            "value": "Microsoft.Storage/storageAccounts/fortmuappteamtestdiag"
+            "value": "Microsoft.Storage/storageAccounts/fortmutestdiag"
         },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"
@@ -95,13 +95,13 @@
             "value": "Storage"
         },
         "backupVaultName": {
-            "value": "FortmuAppTeamTestRecoveryVault"
+            "value": "FortmuTestRecoveryVault"
         },
         "backupFabricName": {
             "value": "Azure"
         },
         "backupVaultRGName": {
-            "value": "FortmuAppTeamTest"
+            "value": "FortmuTest"
         },
         "backupVaultRGIsNew": {
             "value": false
@@ -150,9 +150,12 @@
             }
         },
         "backupItemName": {
-            "value": "vm;iaasvmcontainerv2;FortmuAppTeamTest;FortmuTestVM"
+            "value": "vm;iaasvmcontainerv2;FortmuTest;FortmuTestVM"
         }
     }
 }
+
+
+
 
 

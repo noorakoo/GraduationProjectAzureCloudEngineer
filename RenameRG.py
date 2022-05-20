@@ -1,10 +1,10 @@
 import json
 import os
 
-RGName = "FortmuAppTeamTestTest"
-NewRGName = "FortmuAppTeamTest"
+# RGName = "FortmuDemoProd"
+# NewRGName = "FortmuProd"
 
-for directory in ['./TestEnvTemplates']:
+for directory in ['./ProdEnvTemplates']:
     # Iterating over files in the directory
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
