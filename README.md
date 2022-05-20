@@ -64,3 +64,4 @@ python CreateResources.py
 
 ![Alt text](/README.md_photo/WebApp.PNG "Web App")
 
+&copy; Noora Kataja & Jonas Richter
