@@ -7,7 +7,7 @@ os.system('az login')
 os.system(f'az account set --subscription {SubscriptionId}')
 
 # Creating the environment / Resource Group and Template
-ResourceGroup = 'FortmuAppTeam'
+ResourceGroup = 'FortmuTest'
 Location = 'northeurope'
 TemplateName = 'FortmuTemp'
 os.system(f'az group create --name {ResourceGroup} --location {Location}')
@@ -59,7 +59,7 @@ os.system('az login')
 os.system(f'az account set --subscription {SubscriptionId}')
 
 # Creating the environment / Resource Group and Template
-ResourceGroup = 'FortmuAppTeam'
+ResourceGroup = 'FortmuProd'
 Location = 'northeurope'
 TemplateName = 'FortmuTemp'
 os.system(f'az group create --name {ResourceGroup} --location {Location}')
@@ -70,13 +70,13 @@ ParameterFile = '@ProdEnvTemplates/ProdVirtualNetworkParameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Virtual Machine 1
-TemplateFile = 'ProdEnvTemplates/ProdVirtualMachineTemplate.json'
-ParameterFile = '@ProdEnvTemplates/ProdVirtualMachineParameters.json'
+TemplateFile = 'ProdEnvTemplates/ProdVirtualMachine1Template.json'
+ParameterFile = '@ProdEnvTemplates/ProdVirtualMachine1Parameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the Virtual Machine 2
-TemplateFile = ''
-ParameterFile = '@'
+TemplateFile = 'ProdEnvTemplates/ProdVirtualMachine2Template.json'
+ParameterFile = '@ProdEnvTemplates/ProdVirtualMachine2Parameters.json'
 os.system(f'az deployment group create --name {TemplateName} --resource-group {ResourceGroup} --template-file {TemplateFile} --parameters {ParameterFile}')
 
 # Deploying the PostgreSQL Database
