@@ -5,7 +5,7 @@ ToDeploy = input("""
 Which environment would you like to deploy?
     1. Testing 
     2. Production
-    3. Both option 
+    3. Both options
 Enter the number of the desired deployment: """)
 
 
@@ -17,7 +17,7 @@ Please enter a valid input value!
 Which environment would you like to deploy?
     1. Testing 
     2. Production
-    3. Both option 
+    3. Both options
 Enter the number of the desired deployment: """)
 
 
