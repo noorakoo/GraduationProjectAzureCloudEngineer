@@ -59,7 +59,7 @@ python CreateResources.py
 
 > Deploy Landing Zone through DevOps Pipeline:
 1.	Press 'Set up build' from repository
-2.	Select your environment and sign in to your Azure account when prompted by the Pipeline
+2.	Sign in to your Azure account when prompted by the Pipeline
 3.	Watch your environment deploy through the Pipeline
 
 > Open your Web App through the Private Link, and you are ready to code and deploy your Apps!
