@@ -2,7 +2,7 @@ import json
 import os
 
 # Fill in the variables below to change any string or resource group name in the .json files
-# Change the ./ProdEnvTemplates to ./TestEnvTemplates to commit changes in the Testing environment
+# Change the ./ProdEnvTemplates to ./TestEnvTemplates on line 10 to commit changes in the Testing environment
 
 RGName = ''
 NewRGName = ''
