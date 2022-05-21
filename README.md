@@ -1,7 +1,7 @@
 [![Build Status](https://dev.azure.com/AcademyAzure2022/Fortmu%20Ltd%20-%20Group%203/_apis/build/status/FortmuDemo?branchName=master)](https://dev.azure.com/AcademyAzure2022/Fortmu%20Ltd%20-%20Group%203/_build/latest?definitionId=142&branchName=master)
 
 # Introduction 
-Landing Zone for Fortmu Ltd Application Development & Production Team.
+Landing Zone for Fortmu Ltd Application Development & Production Team in the Microsoft Azure Cloud platform.
 
 With this Landing Zone you will have a cloud based environment up and running in just a couple of clicks to build your Web Apps. Customize the platform to suit your needs through parameter files.
 ```
