@@ -2,6 +2,7 @@ import json
 import os
 
 # Uncomment the variables below to change any string or resource group
+# Change the ./ProdEnvTemplates to ./TestEnvTemplates to commit changes in the Testing environment
 
 # RGName = ""
 # NewRGName = ""
