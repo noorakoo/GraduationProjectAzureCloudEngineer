@@ -1,11 +1,11 @@
 import json
 import os
 
-# Uncomment the variables below to change any string or resource group
+# Fill in the variables below to change any string or resource group name in the .json files
 # Change the ./ProdEnvTemplates to ./TestEnvTemplates to commit changes in the Testing environment
 
-# RGName = ''
-# NewRGName = ''
+RGName = ''
+NewRGName = ''
 
 for directory in ['./ProdEnvTemplates']:
     # Iterating over files in the directory
