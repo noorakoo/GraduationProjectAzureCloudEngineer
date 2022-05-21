@@ -1,8 +1,10 @@
 import json
 import os
 
-# RGName = "FortmuDemoProd"
-# NewRGName = "FortmuProd"
+# Uncomment the variables below to change any string or resource group
+
+# RGName = ""
+# NewRGName = ""
 
 for directory in ['./ProdEnvTemplates']:
     # Iterating over files in the directory
