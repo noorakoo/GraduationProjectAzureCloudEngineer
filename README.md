@@ -5,11 +5,9 @@ Landing Zone for Fortmu Ltd Application Development & Production Team in the Mic
 
 With this Landing Zone you will have a cloud based environment up and running in just a couple of clicks to build your Web Apps. Customize the platform to suit your needs through parameter files.
 ```
-Run azure-pipelines.yml to deploy your Landing Zone through Pipeline
+Run azure-pipelines.yml to deploy your Landing Zone through Pipeline (.yml will run CreateResourcesPipeline.py)
 
 Run CreateResources.py to deploy your Landing Zone through code editor
-
-Run CreateResourcesPipeline.py to deploy your Landing Zone through the Pipeline
 
 Run Rename.py to rename any strings in the parameter and template files (e.g. naming, location, subscription ID)
 
